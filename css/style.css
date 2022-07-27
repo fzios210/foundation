@@ -12,7 +12,7 @@
 }
 
 .nav {
-    background-color: rgba(255, 255, 255, 0.8);
+    /*background-color: rgba(255, 255, 255, 0.8);*/
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    backdrop-filter: blur(5px);
+    /*backdrop-filter: blur(5px);*/
     box-shadow: #3b3b3b27 0px 1px 5px;
 }
 
@@ -54,6 +54,7 @@
     font-size: xx-large;
     padding-top: 15px;
     color: #013781;
+    text-shadow: #414141 0px 1px 1px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -84,10 +85,6 @@ a:visited {
     color: black;
 }
 
-main {
-    margin-top: 77px;
-}
-
 .ft {
     padding: 10px;
     display: flex;
@@ -100,18 +97,32 @@ main {
 }
 
 
-
 /*homepage*/
 
 .b-block {
-    position: absolute;
     z-index: 1;
-    width: 50%;
+    width: 6%;
     height: 100%;
-    background-color: rgba(1, 54, 129, 0.6);
+    background-color: rgba(1, 54, 129, 0.4);
     display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: right;
+    backdrop-filter: blur(5px);
+}
+
+.w-block {
+    z-index: 1;
+    width: 6%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.5);
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(5px);
 }
 
 .main-pic {
@@ -123,6 +134,92 @@ main {
     font-size: 50px;
     margin-right: 30px;
 }
+
+.info {
+    color: #fff;
+    text-align: right;
+    padding: 0px 30px 0px 212px;
+}
+
+.detail-btn {
+    margin-top: 5px;
+    margin-right: 30px;
+    width: 140px;
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #e1e1e100;
+    border: solid 1px white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+/* slider */
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
+.slick-list {
+    height: 49vw;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slick-dots {
+    bottom: 50%;
+    left: -45%;
+}
+
+.slick-prev,
+.slick-next {
+    top: 90%;
+}
+
+.slick-prev {
+    z-index: 999;
+    left: 80%;
+}
+
+.slick-next {
+    right: 7%;
+}
+
+.control-c {
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.4);
+    width: 80px;
+    height: 80px;
+}
+
+.control-c:hover {
+    background-color: rgba(1, 54, 129, 0.4);
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 16px;
+}
+
+.slick-dots li.slick-active button {
+    color: transparent;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    color: transparent;
+}
+
+/* home-news */
 
 .Lb-block {
     background-color: #E4F4FF;
