@@ -72,17 +72,21 @@ li {
     margin-right: 10px;
 }
 
-a {
+li a {
     color: black;
 }
 
-a:hover {
+li a:hover {
     color: black;
     text-decoration: none;
 }
 
-a:visited {
+li a:visited {
     color: black;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .ft {
@@ -96,7 +100,7 @@ a:visited {
     margin-left: 30px;
 }
 
-.search-icon{
+.search-icon {
     width: 100%;
 }
 
@@ -230,7 +234,7 @@ a:visited {
     padding: 40px;
 }
 
-.news{
+.news {
     position: absolute;
     right: 10%;
     top: 5%;
@@ -252,12 +256,12 @@ a:visited {
     text-align: left;
 }
 
-.img-div{
+.img-div {
     position: relative;
     width: 300px;
     height: 200px;
     margin-top: 30px;
-    
+
 }
 
 .mask {
@@ -266,7 +270,7 @@ a:visited {
     left: 0;
     width: 300px;
     height: 200px;
-    background: rgba(82, 82, 82, 0.7);
+    background: rgba(30, 30, 30, 0.7);
     color: #ffffff;
     opacity: 0;
     padding: 5px;
@@ -278,32 +282,57 @@ a:visited {
 }
 
 .img-div a:hover .mask {
-    opacity: 1;           
+    opacity: 1;
 }
 
 .btn-news {
     width: 140px;
     height: 45px;
-    text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
     color: #000000;
-    background-color: #e1e1e100;
+    background-color: #ffffff;
     border: solid 1px black;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
     position: absolute;
     bottom: 10%;
     right: 5%;
+    transition: all 0.3s ease 0s;
 }
 
 .btn-news:hover {
-    background-color: rgba(191, 241, 255, 0.35);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-    color: rgb(0, 0, 0);
-    transform: translateY(-4px);
+    border: solid 1px #052D63;
+    color: #052D63;
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); */
+    /* transform: translateY(-4px); */
+}
+
+.btn-news:after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+}
+
+.btn-news:after {
+    border: solid 1px #052D63;
+    background: #E4F4FF;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+}
+
+.btn-news:hover,
+.btn-news:focus {
+    background-color: transparent;
+}
+
+.btn-news:hover:after,
+.btn-news:focus:after {
+    right: 0;
 }
 
 .Db-block {
@@ -332,10 +361,10 @@ a:visited {
 }
 
 .btn-more:hover {
-    background-color: rgba(65, 139, 236, 0.35);
+    background-color: white;
     box-shadow: 0px 10px 20px rgba(27, 85, 161, 0.4);
-    color: #fff;
-    transform: translateY(-4px);
+    color: #052D63;
+    border: solid 1px #052D63;
 }
 
 .fb {
@@ -388,8 +417,8 @@ a:visited {
     color: #f1f1f1;
     position: relative;
     width: 70%;
-    font-size: 2vw;
-    padding: 5%;
+    font-size: 1.5vw;
+    padding: 5% 5% 10% 5%;
     top: 20%;
     border: 2px solid #f1f1f1;
     border-radius: 10px;
@@ -409,6 +438,55 @@ a:visited {
         padding: 0%;
         border: 0px solid #f1f1f1;
     }
+}
+
+.btn-flex {
+    width: 140px;
+    height: 45px;
+    font-size: 1.1vw;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border: solid 1px black;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-flex:hover {
+    border: solid 1px #052D63;
+    color: #fff;
+}
+
+.btn-flex:after {
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+}
+
+.btn-flex:after {
+    border: solid 1px #ffffff;
+    background: transparent;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+}
+
+.btn-flex:hover,
+.btn-flex:focus {
+    background-color: transparent;
+}
+
+.btn-flex:hover:after,
+.btn-flex:focus:after {
+    right: 0;
 }
 
 .flex-slide {
@@ -468,10 +546,17 @@ a:visited {
     background-position: center center;
 }
 
-.contact {
+.re {
     background: linear-gradient(rgba(0, 6, 39, 0.6), rgba(0, 6, 39, 0.6)), url(../img/nice.png);
     background-size: cover;
     background-position: center center;
+}
+
+.contact {
+    background: linear-gradient(rgba(0, 6, 39, 0.6), rgba(0, 6, 39, 0.6)), url(../img/eyes_poster.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 @media screen and (min-width: 768px) {
