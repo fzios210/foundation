@@ -936,6 +936,11 @@ a:hover {
     height: 300px;
 }
 
+.Db-block h5{
+    width: 50%; 
+    line-height: 40px;
+}
+
 /* read more btn */
 
 button {
@@ -1058,6 +1063,35 @@ button:hover .button-text {
 @media screen and (max-width:1200px) {
     .Db-block{
         height: 320px;
+    }
+
+    .Db-block h5{
+        width: 70%; 
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width:998px){
+    .Db-block h5{
+        width: 75%; 
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .Db-block h5{
+        width: 85%; 
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .Db-block{
+        height: 400px;
+    }
+
+    .Db-block h5{
+        width: 80%; 
     }
 }
 
