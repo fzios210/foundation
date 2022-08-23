@@ -1321,7 +1321,7 @@ button:hover .button-text {
 @media screen and (min-width: 768px) {
     .flex-title-home {
         /* transform: rotate(90deg); */
-        top: 15%;
+        top: 35%;
         animation: aboutFlexSlide 3s 1;
         animation-delay: 0s;
     }
