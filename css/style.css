@@ -47,10 +47,12 @@ h3 {
 
 h4 {
     font-size: 24px;
+    margin: 0;
 }
 
 h5 {
     font-size: 22px;
+    margin: 0;
 }
 
 p {
@@ -1227,8 +1229,8 @@ button:hover .button-text {
 }
 
 @media screen and (max-width: 768px) {
-    .flex-slide h3 {
-        font-size: 2em;
+    .flex-slide h4 {
+        font-size: 0.5em;
     }
 }
 
@@ -1386,6 +1388,14 @@ textarea {
         height: 30px;
         font-size: 16px;
         letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .btn-flex {
+        width: 70px;
+        height: 25px;
+        font-size: 14px;
     }
 }
 
@@ -1718,7 +1728,7 @@ footer {
         width: 80px;
         height: 80px;
         padding: 6px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .gotop img{
