@@ -16,12 +16,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 
 @font-face {
+    font-family: "Noto Serif TC";
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+}
+
+@font-face {
     font-family: "DFT_TX3";
     src: url(DFT_TX3.TTC);
 }
 
 .container-fluid {
-    font-family: "DFT_TX3";
+    font-family: "DFT_TX3","Noto Serif TC";
     padding: 0;
     font-size: 20px;
     text-align: center;
@@ -1716,7 +1721,7 @@ footer {
 @media screen and (max-width: 600px) {
     footer{
         padding: 20px;
-        height: 690px;
+        /* height: 600px; */
     }
 
     .ft{
