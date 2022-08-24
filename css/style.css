@@ -574,7 +574,7 @@ a:hover {
 @media screen and (max-width:998px) {
     .slider-nav {
         width: 300px;
-        top: 25%
+        top: 20%
     }
 
     .slider-for {
