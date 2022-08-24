@@ -271,7 +271,7 @@
             <div class="gotop">
                     <a href="#top">
                         <img src="img/top.png" alt="">
-                        <h5>BACK TO TOP</h5>
+                        <h5 id="GT">BACK TO TOP</h5>
                     </a>
             </div>     
         </main>
@@ -369,6 +369,13 @@
         $(window).on("scroll", function () {
             scroll()
         });
+
+        var pageWidth  = document.body.clientWidth;
+        if (pageWidth < 600){
+            document.getElementById("GT").textContent="TOP";
+        }else if(pageWidth > 600){
+            document.getElementById("GT").textContent="BACK TO TOP";
+        }
     </script>
 </body>
 

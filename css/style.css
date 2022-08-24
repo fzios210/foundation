@@ -1746,17 +1746,19 @@ footer {
     }
 
     .gotop{
-        width: 55px;
-        height: 70px;
-        padding: 5px;
+        width: 40px;
+        height: 40px;
+        padding: 2px;
         
     }
 
     .gotop h5{
-        font-size: 8px;
+        font-size: 4px;
+        margin-top: -15px;
     }
 
     .gotop img{
-        width: 70%;
+        width: 60%;
+        margin-top: -15px;
     }
 }
