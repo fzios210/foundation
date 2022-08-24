@@ -13,6 +13,8 @@
 /* Extra Large devices (large laptops/desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+
 @font-face {
     font-family: "DFT_TX3";
     src: url(DFT_TX3.TTC);
@@ -1399,6 +1401,12 @@ textarea {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .flex-container{
+        width: 70%;
+    }
+}
+
 /* home-social */
 
 .w-block {
@@ -1706,13 +1714,21 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    footer{
+        padding: 20px;
+        height: 690px;
+    }
+
+    .ft{
+        width: 100%;
+    }
     
     .search-btn{
         right: 20%;
     }
 
     .ft-li{
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .ft-li2{
