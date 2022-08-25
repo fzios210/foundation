@@ -355,6 +355,7 @@ a:hover {
 }
 
 .slider-text {
+    font-weight: 500;
     padding-left: 5%;
     height: 100px;
     text-align: left;
@@ -591,6 +592,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.news-contain h1{
+    font-weight: 500;
 }
 
 .news-area {
@@ -869,6 +874,10 @@ a:hover {
     align-items: center;
     justify-content: center;
     height: 300px;
+}
+
+.Db-block h1{
+    font-weight: 500;
 }
 
 .Db-block h5 {
@@ -1418,6 +1427,7 @@ textarea {
 /* gotop */
 
 .gotop {
+    font-family: 'DFT_TX3';
     color: white;
     background-color: #052e63bb;
     width: 145px;
