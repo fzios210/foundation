@@ -2156,6 +2156,14 @@ footer {
     .sec-slogn2{
         margin-left: -33%;
     }
+
+    .t-title{
+        width: 40%;
+    }
+
+    .e-title{
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width: 998px) {
@@ -2212,6 +2220,31 @@ footer {
         margin-left: 67%;
         width: 40%;
     }
+
+    .t-title{
+        width: 52%;
+        margin: 20px auto;
+    }
+
+    .t-contain{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .t-head{
+        width: 200px;
+        height: 200px;
+    }
+
+    .t-text{
+        align-items: center;
+    }
+
+    .t-text h2{
+        margin-top: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -2293,6 +2326,31 @@ footer {
         margin-left: 70%;
         width: 40%;
     }
+
+    .t-area{
+        max-width: 89%;
+    }
+
+    .t-title{
+        width: 38%;
+    }
+
+    .e-area{
+        max-width: 89%;
+    }
+
+    .e-title{
+        width: 20%;
+    }
+
+    .e-pic{
+        width: 180px;
+        height: 130px;
+    }
+
+    .e-pic-phone{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2361,5 +2419,21 @@ footer {
 
     .border-R{
         width: 38%;
+    }
+
+    .t-area{
+        max-width: 85%;
+    }
+
+    .t-title{
+        width: 65%;
+    }
+
+    .e-area{
+        max-width: 85%;
+    }
+
+    .e-title{
+        width: 30%;
     }
 }
