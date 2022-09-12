@@ -2176,9 +2176,13 @@ footer {
         padding: 30px;
     }
 
+    .sec-area{
+        height: 750px;
+    }
+
     .sec-title{
         margin-top: 75px;
-        width: 70%;
+        width: 77%;
     }
 
     .sec-slogn{
@@ -2236,6 +2240,59 @@ footer {
         margin-left: 5.5%;
         padding: 30px;
     }
+
+    .sec-area{
+        margin-top: -5%;
+        max-width: 89%;
+        height: 750px;   
+    }
+
+    .sec-area-phone{
+        order: 12;
+    }
+
+    .sec-title{
+        margin-top: 60px;
+        width: 40%;
+    }
+
+    .sec-slogn{
+        margin-left: -25%;
+        margin-bottom: -16px;
+    }
+
+    .sec-slogn2{
+        margin-left: -40%;
+        margin-bottom: -16px;
+    }
+    
+    .sec-pic01{
+        width: 100%;
+        margin-top: -5%;
+        margin-left: 20%;
+    }
+
+    .sec-pic01-phone{
+        order: -1;
+    }
+
+    .sec-pic02{
+        width: 85.5%;
+        margin-top: -5%;
+        margin-left: -10%;
+        margin-right: 15%;
+    }
+
+    .contain-text{
+        width: 90%;
+        margin: 0 auto;
+        background-size: calc(35%);
+    }
+
+    .border-R{
+        margin-left: 70%;
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2263,6 +2320,46 @@ footer {
     }
 
     .start-text{
-        padding: 20px;
+        padding: 30px;
+    }
+
+    .sec-area{
+        margin-top: -3.5%;
+        max-width: 85%;
+        height: 850px;
+    }
+
+    .sec-title{
+        width: 66%;
+    }
+
+    .sec-pic01{
+        margin-top: -8%;
+    }
+
+    .sec-pic02{
+        margin-top: -8%;
+    }
+
+    .sec-slogn{
+        font-size: 21px;
+        margin-left: 0%;
+        margin-bottom: -12px;
+    }
+
+    .sec-slogn2{
+        font-size: 21px;
+        margin-left: -25%;
+        margin-bottom: -12px;
+    }
+
+    .contain-text{
+        width: 95%;
+        margin: 0 auto;
+        background-size: calc(35%);
+    }
+
+    .border-R{
+        width: 38%;
     }
 }
