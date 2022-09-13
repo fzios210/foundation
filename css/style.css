@@ -1451,6 +1451,10 @@ textarea {
     flex-direction: column;
 }
 
+.w-block h1{
+    font-family: 'DFT_TX3', 'Noto Sans TC', serif;
+}
+
 .social-contain {
     display: flex;
     align-items: center;
