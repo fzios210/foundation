@@ -276,7 +276,7 @@ a:hover {
         height: 40px;
     }
 
-    .logo{
+    .logo {
         width: 50px;
     }
 
@@ -286,7 +286,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 1500px) {
-    .logo{
+    .logo {
         width: 42px;
         padding-left: 6px;
     }
@@ -723,14 +723,14 @@ a:hover {
     left: 0;
     width: 300px;
     height: 200px;
-    background: rgba(30, 30, 30, 0.7);
+    background: rgba(1, 54, 129, 0.4);
     color: #ffffff;
     opacity: 0;
     padding: 10px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
@@ -1120,7 +1120,7 @@ button:hover .button-text {
     align-items: center;
 }
 
-.L-block h1{
+.L-block h1 {
     margin-bottom: 1.5%;
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
 }
@@ -1451,7 +1451,7 @@ textarea {
     flex-direction: column;
 }
 
-.w-block h1{
+.w-block h1 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
 }
 
@@ -1608,7 +1608,7 @@ footer {
     display: list-item;
     list-style: disc inside;
     padding-left: 10px;
-    
+
 }
 
 .ft-li:hover {
@@ -1833,12 +1833,12 @@ footer {
     color: white;
 }
 
-.header-color h1{
+.header-color h1 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
     font-size: 34px;
 }
 
-.about-list{
+.about-list {
     margin: 0 auto;
     margin-top: -25px;
     height: 50px;
@@ -1849,19 +1849,19 @@ footer {
     padding-top: 10px;
 }
 
-.about-list a{
+.about-list a {
     color: white;
 }
 
-.about-list a:hover{
+.about-list a:hover {
     color: white;
 }
 
-.about-list a:visited{
+.about-list a:visited {
     color: white;
 }
 
-.about-list li{
+.about-list li {
     border-left: rgb(61, 84, 132) 2px solid;
     padding: 0 10px 0 20px;
 }
@@ -1874,7 +1874,7 @@ footer {
     font-size: 30px;
 }
 
-.start-pic{
+.start-pic {
     height: 600px;
     width: 100%;
     background-image: url(../img/about/about.jpg);
@@ -1885,7 +1885,7 @@ footer {
     z-index: 2;
 }
 
-.start-text{
+.start-text {
     background-color: rgba(5, 45, 97, 0.6);
     text-align: left;
     color: white;
@@ -1897,12 +1897,12 @@ footer {
     z-index: 9;
 }
 
-.start-text h1{
+.start-text h1 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
     margin: 0;
 }
 
-.ch2{
+.ch2 {
     margin-top: 10px;
 }
 
@@ -1914,7 +1914,7 @@ footer {
     font-size: 30px;
 }
 
-.sec-area{
+.sec-area {
     margin-top: -4%;
     background-color: rgba(199, 227, 255, 0.6);
     width: 80%;
@@ -1923,9 +1923,9 @@ footer {
     z-index: 1;
 }
 
-.contain-text{
+.contain-text {
     background-image: url(../img/about/border-L.png);
-    background-position: left top ;
+    background-position: left top;
     background-repeat: no-repeat;
     background-size: calc(40%);
     width: 100%;
@@ -1933,26 +1933,26 @@ footer {
     text-align: left;
 }
 
-.sec-slogn{
+.sec-slogn {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
     margin-bottom: -20px;
     margin-left: -25%;
 }
 
-.sec-slogn2{
+.sec-slogn2 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
     margin-bottom: -20px;
     margin-left: -45%;
 }
 
-.border-R{
+.border-R {
     margin-left: 58%;
     margin-top: -12%;
     width: 50%;
     transform: rotate(180deg);
 }
 
-.sec-pic01{
+.sec-pic01 {
     width: 100%;
     margin-left: -20%;
     margin-top: 20%;
@@ -1960,7 +1960,7 @@ footer {
     position: relative;
 }
 
-.sec-pic02{
+.sec-pic02 {
     width: 100%;
     margin-right: -20%;
     margin-top: 100%;
@@ -1968,31 +1968,31 @@ footer {
     position: relative;
 }
 
-#third{
+#third {
     background-color: #052D63;
     color: white;
 }
 
-.t-area{
+.t-area {
     background-color: rgba(199, 227, 255, 0.6);
     position: relative;
     z-index: 1;
 }
 
-.t-title{
+.t-title {
     width: 30%;
     margin: 30px auto;
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
     border-left: rgb(221, 240, 255) 5px solid;
-    font-size: 30px;    
+    font-size: 30px;
 }
 
-.t-contain{
+.t-contain {
     width: 100%;
     display: flex;
 }
 
-.t-text{
+.t-text {
     margin-left: 10px;
     text-align: left;
     display: flex;
@@ -2001,15 +2001,15 @@ footer {
     justify-content: center;
 }
 
-.t-text h2{
+.t-text h2 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
 }
 
-.t-text h1{
+.t-text h1 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
 }
 
-.t-head{
+.t-head {
     width: 1200px;
     background-image: url(../img/about/head.jpg);
     background-position: center top;
@@ -2017,41 +2017,41 @@ footer {
     background-size: cover;
 }
 
-.t-list{
+.t-list {
     width: 100%;
     padding: 5px 0;
 }
 
-.t-list li{
+.t-list li {
     margin-right: 20px;
 }
 
-.t-list2{
+.t-list2 {
     width: 100%;
     padding: 5px 0;
 }
 
-.t-list2 li{
+.t-list2 li {
     margin-right: 23px;
 }
 
-.e-area{
+.e-area {
     background-color: rgba(199, 227, 255, 0.6);
     border-left: 3px solid #9AB2D2;
 }
 
-.e-area h1{
+.e-area h1 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
 }
 
-.e-title{
+.e-title {
     width: 20%;
     margin: 30px auto;
     border-left: #052d63 5px solid;
-    font-size: 30px;    
+    font-size: 30px;
 }
 
-.e-pic{
+.e-pic {
     margin: 30px auto;
     width: 250px;
     height: 180px;
@@ -2065,7 +2065,7 @@ footer {
     padding-right: 5px;
 }
 
-.e-pic-month{
+.e-pic-month {
     color: rgba(255, 255, 255, 0.6);
     font-family: 'Segoe UI', 'Noto Sans TC', serif;
     font-weight: 1000;
@@ -2073,47 +2073,47 @@ footer {
     margin: 0;
 }
 
-.e-table{
+.e-table {
     width: 100%;
     margin-bottom: 50px;
 }
 
-.e-table tr{
+.e-table tr {
     border-bottom: #9AB2D2 1px solid;
 }
 
-.e-table td{
+.e-table td {
     text-align: left;
     padding: 5px;
 }
 
-.e-table th{
+.e-table th {
     width: 8%;
     text-align: left;
     padding: 5px;
 }
 
-.e-year{
+.e-year {
     vertical-align: top;
     width: 15%;
 }
 
 @media only screen and (max-width: 1500px) {
-    .about-list{
+    .about-list {
         width: 80%;
     }
 
-    .about-title{
+    .about-title {
         width: 80%;
     }
 
-    .start-pic{
+    .start-pic {
         padding: 0;
         margin-left: -20%;
         width: 120%;
     }
 
-    .start-text{
+    .start-text {
         width: 120%;
         margin-left: -25%;
         margin-top: 10%;
@@ -2122,322 +2122,456 @@ footer {
 }
 
 @media only screen and (max-width: 1280px) {
-    .about-list{
+    .about-list {
         width: 85%;
     }
 
-    .about-title{
+    .about-title {
         width: 100%;
     }
 
-    .start-pic{
+    .start-pic {
         padding: 0;
         margin-left: -25%;
         width: 140%;
         height: 550px;
     }
 
-    .start-text{
+    .start-text {
         width: 140%;
         margin-left: -40%;
         margin-top: 4%;
         padding: 40px;
     }
 
-    .sec-area{
+    .sec-area {
         margin-top: -5.4%;
     }
 
-    .sec-title{
+    .sec-title {
         margin-top: 90px;
         width: 100%;
     }
 
-    .sec-slogn{
+    .sec-slogn {
         margin-left: -10%;
     }
 
-    .sec-slogn2{
+    .sec-slogn2 {
         margin-left: -33%;
     }
 
-    .t-title{
+    .t-title {
         width: 40%;
     }
 
-    .e-title{
+    .e-title {
         width: 30%;
     }
 }
 
 @media only screen and (max-width: 998px) {
-    .about-title{
+    .about-title {
         width: 90%;
     }
 
-    .start-pic{
+    .start-pic {
         padding: 0;
         width: 110%;
         height: 500px;
         margin-left: 0%;
     }
 
-    .start-text{
+    .start-text {
         margin-top: 8%;
         margin-left: -35%;
         padding: 30px;
     }
 
-    .sec-area{
+    .sec-area {
         height: 750px;
     }
 
-    .sec-title{
+    .sec-title {
         margin-top: 75px;
         width: 77%;
     }
 
-    .sec-slogn{
+    .sec-slogn {
         margin-left: -5%;
         margin-bottom: -16px;
     }
 
-    .sec-slogn2{
+    .sec-slogn2 {
         margin-left: -25%;
         margin-bottom: -16px;
     }
-    
-    .sec-pic01{
+
+    .sec-pic01 {
         margin-top: 45%;
     }
 
-    .sec-pic02{
+    .sec-pic02 {
         margin-top: 150%;
     }
 
-    .contain-text{
+    .contain-text {
         margin: 0 10px;
         background-size: calc(35%);
     }
 
-    .border-R{
+    .border-R {
         margin-left: 67%;
         width: 40%;
     }
 
-    .t-title{
+    .t-title {
         width: 52%;
         margin: 20px auto;
     }
 
-    .t-contain{
+    .t-contain {
         flex-direction: column;
         align-items: center;
         padding: 0 5%;
     }
 
-    .t-head{
+    .t-head {
         width: 200px;
         height: 200px;
     }
 
-    .t-text{
+    .t-text {
         align-items: center;
     }
 
-    .t-text h2{
+    .t-text h2 {
         margin-top: 10px;
     }
 
 }
 
 @media only screen and (max-width: 768px) {
-    .about-list{
+    .about-list {
         width: 100%;
     }
 
-    .about-list li{
+    .about-list li {
         padding: 0 5px 0 10px;
     }
 
-    .about-title{
+    .about-title {
         width: 50%;
     }
 
-    .start-pic{
+    .start-pic {
         padding: 0;
         width: 100%;
         height: 350px;
         margin-left: 0%;
     }
 
-    .start-text{
+    .start-text {
         width: 110%;
         margin-top: -10%;
         margin-left: 5.5%;
         padding: 30px;
     }
 
-    .sec-area{
+    .sec-area {
         margin-top: -5%;
         max-width: 89%;
-        height: 750px;   
+        height: 750px;
     }
 
-    .sec-area-phone{
+    .sec-area-phone {
         order: 12;
     }
 
-    .sec-title{
+    .sec-title {
         margin-top: 60px;
         width: 40%;
     }
 
-    .sec-slogn{
+    .sec-slogn {
         margin-left: -25%;
         margin-bottom: -16px;
     }
 
-    .sec-slogn2{
+    .sec-slogn2 {
         margin-left: -40%;
         margin-bottom: -16px;
     }
-    
-    .sec-pic01{
+
+    .sec-pic01 {
         width: 100%;
         margin-top: -5%;
         margin-left: 20%;
     }
 
-    .sec-pic01-phone{
+    .sec-pic01-phone {
         order: -1;
     }
 
-    .sec-pic02{
+    .sec-pic02 {
         width: 85.5%;
         margin-top: -5%;
         margin-left: -10%;
         margin-right: 15%;
     }
 
-    .contain-text{
+    .contain-text {
         width: 90%;
         margin: 0 auto;
         background-size: calc(35%);
     }
 
-    .border-R{
+    .border-R {
         margin-left: 70%;
         width: 40%;
     }
 
-    .t-area{
+    .t-area {
         max-width: 89%;
     }
 
-    .t-title{
+    .t-title {
         width: 38%;
     }
 
-    .e-area{
+    .e-area {
         max-width: 89%;
     }
 
-    .e-title{
+    .e-title {
         width: 20%;
     }
 
-    .e-pic{
+    .e-pic {
         width: 180px;
         height: 130px;
     }
 
-    .e-pic-phone{
+    .e-pic-phone {
         display: none;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .header-color h1{
+    .header-color h1 {
         font-size: 28px;
     }
 
-    .about-list{
+    .about-list {
         padding-top: 13px;
         width: 100%;
         font-size: 16px;
     }
 
-    .about-list ul{
+    .about-list ul {
         padding-left: 5px;
     }
 
-    .about-list li{
+    .about-list li {
         padding: 0 5px 0 5px;
         margin-right: 0;
     }
 
-    .about-title{
+    .about-title {
         width: 75%;
     }
 
-    .start-text{
+    .start-text {
         padding: 30px;
     }
 
-    .sec-area{
+    .sec-area {
         margin-top: -3.5%;
         max-width: 85%;
         height: 850px;
     }
 
-    .sec-title{
+    .sec-title {
         width: 66%;
     }
 
-    .sec-pic01{
+    .sec-pic01 {
         margin-top: -8%;
     }
 
-    .sec-pic02{
+    .sec-pic02 {
         margin-top: -8%;
     }
 
-    .sec-slogn{
+    .sec-slogn {
         font-size: 21px;
         margin-left: 0%;
         margin-bottom: -12px;
     }
 
-    .sec-slogn2{
+    .sec-slogn2 {
         font-size: 21px;
         margin-left: -25%;
         margin-bottom: -12px;
     }
 
-    .contain-text{
+    .contain-text {
         width: 95%;
         margin: 0 auto;
         background-size: calc(35%);
     }
 
-    .border-R{
+    .border-R {
         width: 38%;
     }
 
-    .t-area{
+    .t-area {
         max-width: 85%;
     }
 
-    .t-title{
+    .t-title {
         width: 65%;
     }
 
-    .e-area{
+    .e-area {
         max-width: 85%;
     }
 
-    .e-title{
+    .e-title {
         width: 30%;
     }
+}
+
+/* news */
+
+.news-header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 400px;
+}
+
+.news-header-title {
+    font-family: 'DFT_TX3', 'Noto Sans TC', serif;
+    font-size: 34px;
+    position: absolute;
+    z-index: 99;
+    left: 45%;
+    top: 25%;
+}
+
+.news-header-color {
+    background-color: #5790df4d;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+}
+
+.news-main-pic {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    filter: blur(2px);
+    position: relative;
+    z-index: 1;
+}
+
+
+.news-main01 {
+    background-image: url(../img/news/01.jpg);
+}
+
+.news-main02 {
+    background-image: url(../img/news/02.jpg);
+}
+
+.news-main03 {
+    background-image: url(../img/news/03.jpg);
+}
+
+.news-main04 {
+    background-image: url(../img/news/04.jpg);
+}
+
+.news-main05 {
+    background-image: url(../img/news/05.jpg);
+}
+
+.news-main-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3% 0;
+    padding: 0 5%;
+}
+
+.news-main-contain {
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    width: 450px;
+    height: 400px;
+}
+
+.news-img-div {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.news-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 54, 129, 0.4);
+    color: #ffffff;
+    opacity: 0;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-img-div a:hover .news-mask {
+    opacity: 1;
+}
+
+.news-main-title{
+    text-align: left;
+    color: #000;
+}
+
+.news-main-title:hover{
+    color: #000;
+}
+
+.news-main-title h3{
+    margin-bottom: 10px;
+}
+
+.news-type {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.news-ul{
+    display:inline-block;
+}
+
+.news-ul li{
+    display: list-item;
+    margin: 1% 0;
 }
