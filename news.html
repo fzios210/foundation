@@ -70,21 +70,28 @@
             </div>
         </nav>
         <header class="news-header">
-            <h1 class="news-header-title">最新消息</h1>
+            <h1 class="news-header-title">最新消息</h1>            
             <div class="news-header-color"></div>
-            <div class="slider center">
+            <!-- <div class="slider center">
                 <div class="news-main-pic news-main01"></div>
                 <div class="news-main-pic news-main02"></div>
                 <div class="news-main-pic news-main03"></div>
                 <div class="news-main-pic news-main04"></div>
                 <div class="news-main-pic news-main05"></div>
-            </div>
-
+            </div> -->
         </header>
         <main>
             <div id="top"></div>
+            <div class="switch-field">
+                <input type="radio" id="radio-one" name="switch" value="build" checked />
+                <label for="radio-one">建築</label>
+                <input type="radio" id="radio-two" name="switch" value="green" />
+                <label for="radio-two">環保</label>
+                <input type="radio" id="radio-three" name="switch" value="care" />
+                <label for="radio-three">長照</label>
+            </div>
             <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 news-main-area">
+                <div class="col-lg-12 col-md-12 col-sm-12 news-main-area">
                     <div class="news-main-contain">
                         <div class="news-img-div news02" data-aos="fade-left" data-aos-delay="100">
                             <a href="#">
@@ -93,12 +100,12 @@
                                 </div>
                             </a>
                         </div>
-                        <div>
-                            <a href="#" class="news-main-title" data-aos="fade-left" data-aos-delay="100">
+                        <div class="news-main-title">
+                            <a href="#">
                                 <h3>活動名稱</h3>
-                                <p>徐元智先生紀念基金會希望透過對於文教將藝術種子散播於各個角落，打造一個真善美的社會。</p>
-                                <p>2022/08/01-2022/08/31</p>
                             </a>
+                            <p>徐元智先生紀念基金會希望透過對於文教將藝術種子散播於各個角落，打造一個真善美的社會。</p>
+                            <p>2022/08/01-2022/08/31</p>
                         </div>
                     </div>
                     <div class="news-main-contain">
@@ -109,11 +116,12 @@
                                 </div>
                             </a>
                         </div>
-                        <div>
-                            <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="100">
+                        <div class="news-main-title">
+                            <a href="#">
                                 <h3>活動名稱</h3>
-                                <p>2022/08/01-2022/08/31</p>
                             </a>
+                            <p>徐元智先生紀念基金會希望透過對於文教將藝術種子散播於各個角落，打造一個真善美的社會。</p>
+                            <p>2022/08/01-2022/08/31</p>
                         </div>
                     </div>
                     <div class="news-main-contain">
@@ -124,15 +132,16 @@
                                 </div>
                             </a>
                         </div>
-                        <div>
-                            <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="100">
+                        <div class="news-main-title">
+                            <a href="#">
                                 <h3>活動名稱</h3>
-                                <p>2022/08/01-2022/08/31</p>
                             </a>
+                            <p>徐元智先生紀念基金會希望透過對於文教將藝術種子散播於各個角落，打造一個真善美的社會。</p>
+                            <p>2022/08/01-2022/08/31</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 Lb-block">
+                <!-- <div class="col-lg-3 col-md-3 col-sm-12 Lb-block">
                     <div class="news-type">
                         <h3 style="margin-bottom: 10px;">分類</h3>
                         <ul class="news-ul">
@@ -142,7 +151,7 @@
                             <li>環保</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="gotop">
                 <a href="#top">
@@ -239,34 +248,34 @@
             document.getElementById("GT").textContent = "BACK TO TOP";
         }
 
-        $('.center').slick({
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
+        // $('.center').slick({
+        //     arrows: false,
+        //     autoplay: true,
+        //     autoplaySpeed: 5000,
+        //     centerMode: true,
+        //     centerPadding: '60px',
+        //     slidesToShow: 3,
+        //     responsive: [
+        //         {
+        //             breakpoint: 768,
+        //             settings: {
+        //                 arrows: false,
+        //                 centerMode: true,
+        //                 centerPadding: '40px',
+        //                 slidesToShow: 3
+        //             }
+        //         },
+        //         {
+        //             breakpoint: 480,
+        //             settings: {
+        //                 arrows: false,
+        //                 centerMode: true,
+        //                 centerPadding: '40px',
+        //                 slidesToShow: 1
+        //             }
+        //         }
+        //     ]
+        // });
     </script>
 </body>
 
