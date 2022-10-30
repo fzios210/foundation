@@ -2755,7 +2755,8 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-    box-shadow: 20px 20px 0px #608bc9;
+    border: 4px double #6790ca;
+    box-shadow: 20px 20px 0px #456ea8;
 }
 
 .event-img-div:hover {
