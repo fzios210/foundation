@@ -924,7 +924,7 @@ a:hover {
         margin-bottom: 5px;
     }
 
-    .news-title{
+    .news-title {
         margin-top: 5px;
     }
 
@@ -943,6 +943,12 @@ a:hover {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .btn-news {
+        right: 0;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
     }
 }
 
@@ -1460,7 +1466,20 @@ textarea {
 
 @media only screen and (max-width: 600px) {
     .flex-container {
-        width: 70%;
+        width: 75%;
+        padding: 3%;
+    }
+
+    .flex-about {
+        width: 80%;
+        padding: 5%;
+    }
+
+    .btn-flex {
+        width: 65px;
+        height: 20px;
+        font-size: 10px;
+        letter-spacing: 0;
     }
 }
 
