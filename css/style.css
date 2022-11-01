@@ -610,6 +610,10 @@ a:hover {
     .Br-block {
         display: none;
     }
+    
+    .slick-for{
+        height: 400px;
+    }
 
     .slick-vertical .slick-slide {
         border: none;
@@ -626,20 +630,26 @@ a:hover {
     }
 
     .slick-list {
-        height: 500px;
+        height: 400px;
         overflow: visible;
     }
 
     .slick-track {
-        height: 500px;
+        height: 400px;
     }
 
     .slick-prev {
         left: 10%;
+        top: 75%;
     }
 
     .slick-next {
         right: 10%;
+        top: 75%;
+    }
+
+    .slick-dots{
+        bottom: 24%;
     }
 
     .slider-nav {
@@ -653,6 +663,10 @@ a:hover {
 
     .slick-current {
         background-image: linear-gradient(to right, rgba(52, 52, 52, 0.3) 0%, transparent 100%);
+    }
+
+    .main-pic{
+        height: 400px;
     }
 
 }
@@ -1125,7 +1139,7 @@ button:hover .button-text {
 
 @media screen and (max-width:600px) {
     .Lb-block {
-        margin-top: 45%;
+        margin-top: 35%;
     }
 
     .Db-block {
@@ -1280,8 +1294,7 @@ button:hover .button-text {
 
 @media screen and (max-width: 768px) {
     .flex-slide {
-        overflow: auto;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 }
 
