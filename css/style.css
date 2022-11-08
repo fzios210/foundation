@@ -3022,7 +3022,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e1edff;
+    background-color: #D9E8F5;
 }
 
 .event-inner-cover {
@@ -3031,14 +3031,15 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
-    width: 110vh;
-    height: 60vh;
+    width: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
-    background-position: center 85%;
+    background-position: center 70%;
     background-size: cover;
     box-shadow: 0px 0px 10px rgba(129, 129, 129, 0.4);
     border-radius: 10px;
-    margin-top: 3.5%;
+    opacity: 0.7;
+    z-index: 1;
 }
 
 .event-inner-cover01 {
@@ -3046,35 +3047,41 @@ footer {
 }
 
 .event-title {
-    background-color: #e1edff;
-    height: 20vh;
+    background-color: #91bed48c;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: sticky;
     top: 50px;
     z-index: 99;
+    margin-top: -35.6vh;
+    padding: 1% 0;
+    padding-left: 10%;
+    box-shadow: 0 -4px 2px 1px #91bed48c;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 .event-title h1 {
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
     font-size: 5vh;
-
 }
 
 .event-title-table {
+    /* background-color: #91bed48c; */
+    background: linear-gradient(#91bed48c, #ceefffa6);
     height: 15vh;
-    background-color: #e1edff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 2% 0;
+    align-items: flex-start;
+    padding-left: 10%;
+    z-index: 98;
+    position: relative;
 }
 
-.event-title-table 
-th,
+.event-title-table th,
 td {
     text-align: left;
     padding: 0 10px;
@@ -3095,8 +3102,7 @@ td {
     height: 40px;
     letter-spacing: 2px;
     font-weight: 500;
-    color: #224675;
-    background-color: #ffffff;
+    color: #000;
     border: solid 1px #224675;
     cursor: pointer;
     outline: none;
@@ -3105,7 +3111,7 @@ td {
 
 .btn-sign:hover {
     border: solid 1px #052D63;
-    color: #052D63;
+    color: #fff;
     /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); */
     /* transform: translateY(-4px); */
 }
@@ -3119,7 +3125,7 @@ td {
 
 .btn-sign:after {
     border: solid 1px #052D63;
-    background: #E4F4FF;
+    background: #013781;
     top: 0;
     bottom: 0;
     left: 0;
@@ -3134,4 +3140,57 @@ td {
 .btn-sign:hover:after,
 .btn-sign:focus:after {
     right: 0;
+}
+
+.event-inner-text {
+    background-image: url(../img/events/border-L.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: calc(20%);
+    margin: 3% 0;
+    padding-top: 3%;
+    padding-left: 3%;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.event-pic-contain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+}
+
+.event-inner-pic {
+    width: 100%;
+    margin: 1% 0;
+}
+
+.event-border-R {
+    margin-top: -5%;
+    width: 20%;
+    position: absolute;
+    right: -15px;
+}
+
+.event-flow{
+    margin-top: 3%;
+    width: 100%;
+    background-color: #224675;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.event-head{
+    background-image: url(../img/events/01/head.jpg);
+    width: 17%;
+    height: 250px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
