@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<style>
+    @media screen and (max-width: 600px) {
+        .slick-current{
+            background-image: none;
+        }
+    }
+</style>
+
 <body>
     <div class="container-fluid">
         <nav class="nav navbar navbar-expand-xl navbar-light">
@@ -63,28 +71,29 @@
             <div id="top"></div>
             <div class="event-inner-header">
                 <div class="event-inner-cover event-inner-cover01"></div>
-            </div>
-            <div class="event-title">
-                <div class="event-title-L">
-                    <a href="event.html"><button class="event-arrow">
-                            <h5>回上頁</h5>
-                        </button></a>
-                    <h1>2022</h1>
-                    <h1>護眼EYECARE</h1>
+                <div class="event-title">
+                    <div class="event-title-L">
+                        <a href="event.html"><button class="event-arrow">
+                                <h5>回上頁</h5>
+                            </button></a>
+                        <h1>2022</h1>
+                        <h1>護眼EYECARE</h1>
+                    </div>
+                    <a href="#" class="sign-area"><button class="btn-sign">前往報名</button></a>
                 </div>
-                <a href="#" class="sign-area"><button class="btn-sign">前往報名</button></a>
+                <table class="event-title-table">
+                    <tr>
+                        <th>主辦單位</th>
+                        <td>徐元智先生紀念基金會</td>
+                    </tr>
+                    <tr>
+                        <th>協辦單位</th>
+                        <td>國立陽明交通大學</td>
+                        <td>亞東科技大學</td>
+                    </tr>
+                </table>
             </div>
-            <table class="event-title-table">
-                <tr>
-                    <th>主辦單位</th>
-                    <td>徐元智先生紀念基金會</td>
-                </tr>
-                <tr>
-                    <th>協辦單位</th>
-                    <td>國立陽明交通大學</td>
-                    <td>亞東科技大學</td>
-                </tr>
-            </table>
+
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12 news-back">
 
@@ -271,10 +280,10 @@
             </div> -->
             <div class="row person-area">
                 <div class="col-lg-2 col-md-1 col-0"></div>
-                <div class="col-lg-3 col-md-4 col-5">
+                <div class="col-lg-3 col-md-4 col-12 person-head-area">
                     <div class="person-head"></div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-7 person-text">
+                <div class="col-lg-5 col-md-6 col-12 person-text">
                     <h1>講者</h1>
                     <h1>李光燾 教授</h1>
                     <p>
@@ -286,7 +295,7 @@
             </div>
             <div class="row person-area">
                 <div class="col-lg-2 col-md-1 col-0"></div>
-                <div class="col-lg-5 col-md-6 col-7 person-text2">
+                <div class="col-lg-5 col-md-6 col-12 person-text2">
                     <h1>講者</h1>
                     <h1>李光燾 教授</h1>
                     <p>
@@ -294,7 +303,7 @@
                         事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
                     </p>
                 </div>
-                <div class="col-lg-3 col-md-4 col-5">
+                <div class="col-lg-3 col-md-4 col-12 person-head-area">
                     <div class="person-head"></div>
                 </div>
                 <div class="col-lg-2 col-md-1 col-0"></div>
@@ -385,29 +394,37 @@
             if (scrollTop == 0) {
                 $(".nav").css("background-color", "transparent");
                 $(".nav").css("backdrop-filter", "blur(2px)");
+                $(".event-title").css("background-color", "#ffffff5b");
+                $(".event-title").css("position", "absolute");
             } else {
                 $(".nav").css("background-color", "rgba(179, 215, 255, 0.4)");
                 $(".nav").css("backdrop-filter", "blur(5px)");
+                $(".event-title").css("background-color", "#b0e5ff");
+                $(".event-title").css("position", "fixed");
             }
         }
 
-        function title_scroll() {
-            var top = $(".event-title").offset(), top;
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop >= 400) {
-                $(".event-title").css("background-color", "#b0e5ff");
-            } else {
-                $(".event-title").css("background-color", "#ffffff5b");
-            }
-        }
+        // function title_scroll() {
+        //     var top = $(".event-title").offset(), top;
+        //     var scrollTop = $(window).scrollTop();
+        //     if (scrollTop >= 400) {
+        //         // $(".event-title").css("top", "41vh");
+        //         // $(".event-title").css("left", "0");
+        //     } else {
+
+        //         // $(".event-title").css("top", "0");
+        //         // $(".event-title").css("left", "0");
+
+        //     }
+        // }
 
         $(window).on("scroll", function () {
             scroll()
         });
 
-        $(window).on("scroll", function () {
-            title_scroll()
-        });
+        // $(window).on("scroll", function () {
+        //     title_scroll()
+        // });
 
         var pageWidth = document.body.clientWidth;
         if (pageWidth < 600) {

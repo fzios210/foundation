@@ -23,6 +23,7 @@
     padding: 0px;
     font-size: 20px;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .row {
@@ -63,7 +64,7 @@ p {
     top: 0;
     left: 0;
     position: fixed;
-    width:100vw;
+    width: 100vw;
     z-index: 1000;
     padding: 0;
     display: flex;
@@ -152,7 +153,7 @@ p {
 
 }
 
-@media (max-width:1200px) {
+@media (max-width:1199px) {
     .navbar-collapse {
         background-color: rgba(117, 154, 197, 0.7);
         backdrop-filter: blur(5px);
@@ -3033,13 +3034,15 @@ footer {
 }
 
 .event-title {
+    width: 100%;
     background-color: #ffffff5b;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 50px;
+    position: absolute;
     z-index: 99;
+    top: 41vh;
+    left: 0;
     margin-top: -34vh;
     padding: 1% 0;
     padding-left: 10%;
@@ -3064,6 +3067,7 @@ footer {
     /* background-color: #91bed48c; */
     background: linear-gradient(#ffffff5b, #ffffff7e);
     backdrop-filter: blur(2px);
+    width: 100%;
     height: 15vh;
     display: flex;
     flex-direction: column;
@@ -3071,7 +3075,8 @@ footer {
     align-items: flex-start;
     padding-left: 10%;
     z-index: 98;
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 
 .event-title-table th,
@@ -3379,13 +3384,13 @@ td {
 
 @media screen and (min-width: 1600px) {
     .event-title {
-        margin-top: -33vh;
+        top: 39vh;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .event-title {
-        top: 40px;
+        top: 39.5vh;
     }
 
     .lazy {
@@ -3443,4 +3448,91 @@ td {
     }
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+    .event-title {
+        top: 38.6vh;
+        padding-left: 5%;
+    }
+
+    .sign-area {
+        margin-right: 5%;
+    }
+
+    .btn-sign {
+        width: 115px;
+        letter-spacing: 1px;
+    }
+
+    .event-title h1 {
+        font-size: 3.5vh;
+    }
+
+    .event-title-table {
+        padding-left: 0;
+        font-size: 16px;
+    }
+
+    .event-border-R {
+        margin-top: -7%;
+    }
+
+    .event-detail {
+        margin-top: 10%;
+    }
+
+    .event-pic-contain {
+        overflow-y: hidden;
+        height: 19vh;
+        margin-top: 8%;
+    }
+
+    .lazy {
+        height: 18vh;
+        overflow: hidden;
+    }
+
+    .event-prev {
+        padding: 3%;
+    }
+
+    .event-next {
+        padding: 3%;
+    }
+
+    .flow-title {
+        margin-top: 10%;
+        width: 60%;
+    }
+
+    .flow-year {
+        width: 10%;
+    }
+
+    .flow-year h1 {
+        font-size: 3Vh;
+    }
+
+    .flow-table td {
+        width: 51%;
+    }
+
+    .person-head {
+        width: 60%;
+    }
+
+    .person-text {
+        margin: 3% 0;
+        padding-left: 5%;
+    }
+
+    .person-text2 {
+        order: 12;
+        margin: 3% 0;
+        padding-right: 5%;
+    }
+
+    .person-head-area {
+        display: flex;
+        align-items: center;
+    }
+}
