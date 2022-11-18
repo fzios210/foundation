@@ -3003,7 +3003,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .event-content{
+    .event-content {
         padding-top: 2%;
     }
 
@@ -3066,7 +3066,7 @@ footer {
 
 .event-title {
     width: 100%;
-    background-color: #ffffff5b;
+    background-color: #e3f4ff80;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3076,7 +3076,7 @@ footer {
     left: 0;
     margin-top: -34vh;
     padding: 1% 0;
-    padding-left: 10%;
+    padding-left: 18%;
     backdrop-filter: blur(2px);
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
@@ -3096,7 +3096,7 @@ footer {
 
 .event-title-table {
     /* background-color: #91bed48c; */
-    background: linear-gradient(#ffffff5b, #ffffff7e);
+    background: linear-gradient(#e3f4ff80, #e3f4ff80);
     backdrop-filter: blur(2px);
     width: 100%;
     height: 15vh;
@@ -3104,7 +3104,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 10%;
+    padding-left: 18%;
     z-index: 98;
     position: absolute;
     bottom: 0;
@@ -3154,7 +3154,7 @@ td {
 }
 
 .sign-area {
-    margin-right: 10%;
+    margin-right: 18%;
 }
 
 .btn-sign {
@@ -3294,7 +3294,7 @@ td {
 .lazy {
     margin-top: 2%;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
 }
 
 .lazy-img {
@@ -3446,6 +3446,18 @@ td {
 }
 
 @media screen and (max-width: 998px) {
+    .event-title {
+        padding-left: 12%;
+    }
+
+    .sign-area {
+        margin-right: 12%;
+    }
+
+    .event-title-table {
+        padding-left: 12%;
+    }
+
     .event-inner-text {
         background-size: calc(25%);
         margin: 3% 0;
@@ -3459,11 +3471,23 @@ td {
     }
 
     .lazy {
-        height: 32vh;
+        height: 35vh;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .event-title {
+        padding-left: 8%;
+    }
+
+    .sign-area {
+        margin-right: 8%;
+    }
+
+    .event-title-table {
+        padding-left: 8%;
+    }
+
     .event-inner-text {
         background-size: calc(30%);
         margin: 5% 0;
@@ -3476,6 +3500,24 @@ td {
         width: 30%;
         margin-top: -9%;
         right: 40px;
+    }
+
+    .person-head {
+        width: 35%;
+    }
+
+    .person-text {
+        margin: 0 6.5%;
+        padding-right: 15%;
+    }
+
+    .person-text2 {
+        order: 10;
+        padding-left: 6%;
+    }
+
+    .person-text2-R{
+        order: 12;
     }
 }
 
@@ -3490,16 +3532,18 @@ td {
     }
 
     .btn-sign {
-        width: 115px;
+        width: 105px;
+        height: 30px;
         letter-spacing: 1px;
+        font-size: 18px;
     }
 
     .event-title h1 {
-        font-size: 3.5vh;
+        font-size: 3vh;
     }
 
     .event-title-table {
-        padding-left: 0;
+        padding-left: 1%;
         font-size: 16px;
     }
 
@@ -3508,7 +3552,9 @@ td {
     }
 
     .event-detail {
+        font-size: 16px;
         margin-top: 10%;
+        padding: 2.8%;
     }
 
     .event-pic-contain {
@@ -3552,12 +3598,11 @@ td {
     }
 
     .person-text {
-        margin: 3% 0;
-        padding-left: 5%;
+        margin: 3% 7%;
+        padding-left: 7%;
     }
 
     .person-text2 {
-        order: 12;
         margin: 3% 0;
         padding-right: 5%;
     }
