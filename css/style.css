@@ -2147,6 +2147,17 @@ footer {
     width: 15%;
 }
 
+@media only screen and (min-width: 1500px) {
+    .sec-area {
+        margin-top: -4.5%;
+    }
+
+    .sec-title {
+        margin-top: 100px
+    }
+}
+
+
 @media only screen and (max-width: 1500px) {
     .about-list {
         width: 80%;
@@ -2167,7 +2178,6 @@ footer {
         margin-left: -25%;
         margin-top: 10%;
     }
-
 }
 
 @media only screen and (max-width: 1280px) {
@@ -2624,10 +2634,10 @@ footer {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     margin: 1% 0;
-    padding: 0 5%;
+    padding: 0 3% 0 5%;
 }
 
 .news-main-contain {
@@ -2636,6 +2646,7 @@ footer {
     display: flex;
     width: 30%;
     margin-bottom: 1%;
+    margin-right: 3%;
 }
 
 .news-img-div {
@@ -2902,18 +2913,20 @@ footer {
     display: flex;
     align-items: center;
     margin-top: 3%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 
-.event-pic-contain {
+.event-pic-area {
+    padding-right: 5%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .event-img-div {
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 300px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-size: 120%;
@@ -2954,6 +2967,8 @@ footer {
 }
 
 .event-content {
+    padding-left: 5%;
+    padding-top: 1%;
     text-align: left;
 }
 
@@ -2961,6 +2976,7 @@ footer {
     color: #052D63;
     font-weight: 600;
     letter-spacing: 2px;
+    font-size: 1.5em;
 }
 
 .event-content p {
@@ -2971,29 +2987,44 @@ footer {
 @media screen and (max-width: 1200px) {
     .event-img-div {
         box-shadow: 15px 15px 0px #456ea8;
-        height: 300px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .event-content h1 {
+        font-size: 1.2em;
+    }
+
+    .event-img-div {
+        box-shadow: 10px 10px 0px #456ea8;
+        height: 200px;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .event-content{
+        padding-top: 2%;
+    }
+
     .event-img-div {
-        height: 200px;
+        height: 220px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .event-img-div {
-        box-shadow: 10px 10px 0px #456ea8;
         width: 85%;
     }
 
-    .event-pic-contain {
+    .event-pic-area {
         order: -1;
+        margin-top: 3%;
     }
 
     .event-content {
         margin: 0 7%;
-        margin-top: 7%;
+        margin-top: 5%;
         order: 12;
     }
 
