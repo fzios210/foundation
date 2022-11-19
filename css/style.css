@@ -3956,3 +3956,134 @@ textarea {
         letter-spacing: 0;
     }
 }
+
+/* charity-art */
+
+.charity-inner-container {
+    margin-top: 50px;
+}
+
+.c-border{
+    border-right: 1px solid #052D63 ;
+}
+
+.c-title {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.c-title-area {
+    width: 85%;
+    height: 100%;
+    background-image: url(../img/charity/art/01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 50px -50px 0px #052D63;
+}
+
+.c-title-area h1 {
+    color: white;
+    font-family: 'DFT_TX3', 'Noto Sans TC', serif;
+    font-size: 3em;
+    line-height: 1;
+    background-image: url(../img/charity/Polygon.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 5%;
+    margin: 0;
+    text-shadow: 2px 2px 2px #4b4b4b;
+}
+
+.c-title p {
+    width: 80%;
+    margin: 1% 0;
+    text-align: left;
+}
+
+.c-pic-contain01 {
+    height: 70vh;
+    margin-top: 3%;
+    padding-left: 5.5%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.c-pic01 {
+    width: 25vw;
+    height: 100%;
+    background-image: url(../img/charity/art/01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -150px 150px 0px -100px #052D63;
+}
+
+.c-text01 {
+    width: 25vw;
+    height: auto;
+    padding: 3%;
+    text-align: left;
+    background-color: white;
+    margin-left: -15%;
+}
+
+.c-text01 h1 {
+    margin-bottom: 0;
+}
+
+.c-text01 h5 {
+    margin: 1% 0;
+}
+
+.c-subtext {
+    margin-top: 3%;
+}
+
+.c-pic-contain02 {
+    height: 70vh;
+    margin-top: 2.7%;
+    padding-right: 5.5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.c-pic02 {
+    width: 25vw;
+    height: 100%;
+    background-image: url(../img/charity/art/01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 150px -150px 0px -100px #052D63;
+}
+
+.c-text02 {
+    width: 25vw;
+    height: auto;
+    padding: 3%;
+    text-align: right;
+    background-color: white;
+    margin-right: -15%;
+}
+
+.c-text02 h1 {
+    margin-bottom: 0;
+}
+
+.c-text02 h5 {
+    margin: 1% 0;
+}
+
+.c-table {
+    margin: 5% 0;
+}
