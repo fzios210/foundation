@@ -3963,8 +3963,8 @@ textarea {
     margin-top: 50px;
 }
 
-.c-border{
-    border-right: 1px solid #052D63 ;
+.c-border {
+    border-right: 1px solid #052D63;
 }
 
 .c-title {
@@ -4084,6 +4084,58 @@ textarea {
     margin: 1% 0;
 }
 
+.c-table-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .c-table {
-    margin: 5% 0;
+    margin-top: 5%;
+    margin-bottom: -1%;
+    width: 80%;
+    border: 1px solid #052D63;
+    padding: 5%;
+}
+
+.c-table table{
+    width: 100%;
+}
+
+.c-table tr {
+    border-bottom: 1px solid #052e637c;
+}
+
+.c-table td{
+    padding: 0;
+}
+
+.c-more{
+    height: 25px;
+}
+
+.modal-contain{
+    display: flex;
+
+}
+
+.c-mySlides{
+    width: 300px;
+    background-color: rgba(86, 107, 163, 0.5);
+    margin-left: 2%;
+    padding: 7%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-light{
+    position: absolute;
+    right: 1.5%;
+    top: 0.5%;
+    color: white;
+    z-index: 99;
+    font-weight: 600;
 }
