@@ -2222,6 +2222,15 @@ footer {
     }
 }
 
+@media only screen and (min-width: 2000px) {
+    .sec-area {
+        margin-top: -6.2%;
+    }
+
+    .sec-title {
+        margin-top: 50%
+    }
+}
 
 @media only screen and (max-width: 1500px) {
     .about-list {
