@@ -108,41 +108,54 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-2 c-border"></div>
-                    <div class="col-lg-8 c-table-contain">
-                        <div class="c-table">
-                            <table>
-                                <tr>
-                                    <td>設立「亞洲文化協會台灣獎助計畫」</td>
-                                    <td><img onclick="openModal();currentSlide(1)" class="c-more"
-                                            src="img/charity/more.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <td>贊助台灣藝術家或學者專家赴美1~12個月不等的研習、創作</td>
-                                </tr>
-                                <tr>
-                                    <td>贊助美國優異藝術家或學者專家來台研究交流</td>
-                                    <td><img onclick="openModal();currentSlide(1)" class="c-more"
-                                            src="img/charity/more.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <td>贊助花蓮交響樂團參加「花蓮國際音樂節」</td>
-                                    <td><img onclick="openModal();currentSlide(1)" class="c-more"
-                                            src="img/charity/more.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <td>贊助台北榮星文教基金會所屬榮星合唱團年度演出活動經費</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="myModal" class="modal1">
-                            <div class="modal-content1">
-                                <div class="c-mySlides mySlides1">
-                                    <span class="close-light cursor" onclick="closeModal()">&times;</span>
-                                    <p>
-                                        支持台灣中美亞洲文化基金會與美國亞洲文化協會合作。
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-lg-8 c-event-contain">
+                        <div id="navigation">
+                            <ul id="listUL">
+                                <li data-aos="flip-down" data-aos-duration="600" data-aos-delay="100"><a>
+                                        <h5>設立「亞洲文化協會台灣獎助計畫」</h5>
+                                        <img class="c-more" src="img/charity/more.png" alt="">
+                                    </a>
+                                    <ul class="myHide">
+                                        <li><a>
+                                                <p>支持台灣中美亞洲文化基金會與美國亞洲文化協會合作。</p>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li data-aos="flip-down" data-aos-duration="600" data-aos-delay="200"><a>
+                                        <h5>贊助台灣藝術家或學者專家赴美1~12個月不等的研習、創作</h5>
+                                    </a>
+                                </li>
+                                <li data-aos="flip-down" data-aos-duration="600" data-aos-delay="300"><a>
+                                        <h5>贊助美國優異藝術家或學者專家來台研究交流</h5>
+                                        <img class="c-more" src="img/charity/more.png" alt="">
+                                    </a>
+                                    <ul class="myHide">
+                                        <li><a>
+                                                <p>與前項藉此促進藝文發展及國民外交</p>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li data-aos="flip-down" data-aos-duration="600" data-aos-delay="300"><a>
+                                        <h5>贊助花蓮交響樂團參加「花蓮國際音樂節」</h5>
+                                        <img class="c-more" src="img/charity/more.png" alt="">
+                                    </a>
+                                    <ul class="myHide">
+                                        <li><a>
+                                                <p>藉由演奏本土文化、生活化以及國際化音樂的交流，提升本土音樂人才的素質，並為社會大眾提供優質的音樂環境。</p>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li data-aos="flip-down" data-aos-duration="600" data-aos-delay="300"><a>
+                                        <h5>贊助台北榮星文教基金會所屬榮星合唱團年度演出活動經費</h5>
+                                        <img class="c-more" src="img/charity/more.png" alt="">
+                                    </a>
+                                    <ul class="myHide">
+                                        <li><a>
+                                                <p>希望透過贊助支持榮星合唱團，持續推展國內兒童音樂教育，並提升國內的音樂素質涵養。</p>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-2"></div>
@@ -211,7 +224,7 @@
     <script src="js/bootstrap-4.3.1.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/lightbox.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/navigation.js" type="text/javascript" charset="utf-8"></script>
     <script>
         AOS.init();
 
