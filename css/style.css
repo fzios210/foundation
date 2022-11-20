@@ -3681,7 +3681,7 @@ td {
 /* art */
 
 .charity-inner-container {
-    margin-top: 50px;
+    border-top: 50px solid #d4eeff80 ;
 }
 
 .c-border {
