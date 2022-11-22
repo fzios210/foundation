@@ -2611,7 +2611,7 @@ footer {
     display: flex;
     justify-content: center;
     padding-left: 5%;
-    margin-top: 1%;
+    margin-top: 1.5%;
 }
 
 .switch-field {
@@ -2883,14 +2883,27 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
+    .news-img-div {
+        height: 200px;
+    }
+
     .news-type {
         margin-top: 1.5%;
     }
 }
 
 @media screen and (max-width: 998px) {
+    .news-main-area {
+        padding-right: 1.5%;
+    }
+
+    .news-main-contain {
+        width: 45%;
+        margin-right: 5%;
+    }
+
     .news-img-div {
-        height: 200px;
+        height: 240px;
     }
 
     .news-back {
@@ -2904,21 +2917,16 @@ footer {
 
 @media screen and (max-width: 768px) {
     .news-type {
-        padding-left: 7%;
+        padding-left: 5%;
         margin-top: 2.5%;
     }
 
     .news-main-area {
-        padding: 0 7%;
+
         margin-top: 2%;
     }
 
-    .news-main-contain {
-        width: 45%;
-    }
-
     .news-img-div {
-        height: 250px;
         background-size: 200%;
     }
 
@@ -2946,7 +2954,12 @@ footer {
 
 @media screen and (max-width: 600px) {
     .news-type {
-        padding-left: 10%;
+        padding-left: 0%;
+        margin-top: 5%;
+    }
+
+    .switch-field {
+        justify-content: center;
     }
 
     .news-main-area {
@@ -2960,12 +2973,20 @@ footer {
     }
 
     .news-img-div {
-        height: 250px;
+        height: 240px;
         background-size: 140%;
     }
 
     .news-img-div:hover {
         background-size: 120%;
+    }
+
+    .news-inner-area {
+        line-height: 1.5;
+    }
+
+    .news-back {
+        margin-top: 4%;
     }
 }
 
@@ -3691,7 +3712,7 @@ td {
 /* art */
 
 .charity-inner-container {
-    border-top: 50px solid #d4eeff80 ;
+    border-top: 50px solid #d4eeff80;
 }
 
 .c-border {
@@ -3778,7 +3799,7 @@ td {
     margin-top: 3%;
 }
 
-.c-letter{
+.c-letter {
     position: absolute;
     right: 0;
     top: -12%;
@@ -3786,17 +3807,17 @@ td {
     color: #daf3ff94;
     font-size: 10em;
     font-weight: 1000;
-    writing-mode:vertical-lr;
+    writing-mode: vertical-lr;
 }
 
-.c-letter2{
+.c-letter2 {
     position: absolute;
     left: 0;
     top: -5%;
     color: #daf3ff94;
     font-size: 9em;
     font-weight: 1000;
-    writing-mode:vertical-rl;
+    writing-mode: vertical-rl;
     transform: rotate(180deg);
 }
 
