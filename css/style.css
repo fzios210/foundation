@@ -2712,7 +2712,7 @@ footer {
     justify-content: flex-start;
     width: 100%;
     margin: 1% 0;
-    padding: 0 3% 0 5%;
+    padding: 0 2% 0 5%;
 }
 
 .news-main-contain {
@@ -2877,8 +2877,13 @@ footer {
 }
 
 @media screen and (min-width: 1600px) {
+    .news-main-area{
+        padding-right: 3%;
+    }
+    
     .news-main-contain {
         width: 23%;
+        margin-right: 2%;
     }
 }
 
