@@ -2877,10 +2877,10 @@ footer {
 }
 
 @media screen and (min-width: 1600px) {
-    .news-main-area{
+    .news-main-area {
         padding-right: 3%;
     }
-    
+
     .news-main-contain {
         width: 23%;
         margin-right: 2%;
@@ -3749,7 +3749,7 @@ td {
 .c-title-area h1 {
     color: white;
     font-family: 'DFT_TX3', 'Noto Sans TC', serif;
-    font-size: 3em;
+    font-size: 3.5em;
     line-height: 1;
     background-image: url(../img/charity/Polygon.png);
     background-repeat: no-repeat;
@@ -3794,6 +3794,7 @@ td {
 
 .c-text01 h1 {
     margin-bottom: 0;
+    font-weight: 600;
 }
 
 .c-text01 h5 {
@@ -3809,7 +3810,7 @@ td {
     right: 0;
     top: -12%;
     letter-spacing: 10px;
-    color: #daf3ff94;
+    color: #daf3ff5e;
     font-size: 10em;
     font-weight: 1000;
     writing-mode: vertical-lr;
@@ -3819,7 +3820,7 @@ td {
     position: absolute;
     left: 0;
     top: -5%;
-    color: #daf3ff94;
+    color: #daf3ff5e;
     font-size: 9em;
     font-weight: 1000;
     writing-mode: vertical-rl;
@@ -3857,6 +3858,7 @@ td {
 
 .c-text02 h1 {
     margin-bottom: 0;
+    font-weight: 600;
 }
 
 .c-text02 h5 {
@@ -3947,4 +3949,221 @@ td {
 
 #navigation ul li ul.myShow {
     display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    .charity-inner-container {
+        border-top: 40px solid #d4eeff80;
+    }
+
+    .c-title-area {
+        width: 90%;
+    }
+
+    .c-title p {
+        width: 90%;
+    }
+
+    .c-pic-contain01 {
+        padding-left: 4.5%;
+        height: 60vh;
+    }
+
+    .c-pic01 {
+        width: 30vw;
+    }
+
+    .c-text01 {
+        width: 35vw;
+        padding: 3.5%;
+    }
+
+    .c-letter {
+        right: -15%;
+    }
+
+    .c-pic-contain02 {
+        margin-top: 4.4%;
+        height: 60vh;
+    }
+
+    .c-pic02 {
+        width: 30vw;
+    }
+
+    .c-text02 {
+        width: 35vw;
+        padding: 3.5%;
+    }
+
+    .c-letter2 {
+        left: -15%;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .c-pic-contain01 {
+        padding-left: 5.5%;
+    }
+
+    .c-pic01 {
+        width: 35vw;
+    }
+
+    .c-text01 {
+        width: 40vw;
+    }
+
+    .c-pic-contain02 {
+        margin-top: 5.3%;
+    }
+
+    .c-pic02 {
+        width: 35vw;
+    }
+
+    .c-text02 {
+        width: 40vw;
+    }
+
+    .c-letter {
+        right: -8%;
+    }
+
+    .c-letter2 {
+        left: -8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .c-title {
+        height: 65vh;
+        margin-left: -1%;
+    }
+
+    .c-title-area {
+        box-shadow: 25px -50px 0px #052d63;
+    }
+
+    .c-pic01 {
+        width: 45vw;
+        box-shadow: -125px 150px 0px -100px #052d63;
+    }
+
+    .c-text01 {
+        width: 50vw;
+    }
+
+    .c-subtext {
+        margin-top: 2%;
+    }
+
+    .c-pic-contain02 {
+        margin-top: 6.6%;
+    }
+
+    .c-pic02 {
+        width: 45vw;
+        box-shadow: 125px -150px 0px -100px #052d63;
+    }
+
+    .c-text02 {
+        width: 50vw;
+    }
+
+    .c-letter {
+        right: 0%;
+        font-size: 8em;
+    }
+
+    .c-letter2 {
+        left: -3%;
+        font-size: 7em;
+    }
+
+    #navigation {
+        width: 90%;
+    }
+
+    #navigation>ul>li {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .c-title {
+        height: 50vh;
+        margin-left: -2%;
+    }
+
+    .c-title-area h1 {
+        padding-left: 10%;
+        font-size: 3em;
+    }
+
+    .c-pic-contain01 {
+        height: 90vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .c-pic01 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: none;
+    }
+
+    .c-text01 {
+        width: 90%;
+        padding: 5%;
+        margin-left: 0;
+        margin-top: -15%;
+        box-shadow: -66px 66px 0px -50px #052d63;
+    }
+
+    .c-pic-contain02 {
+        height: 90vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        margin-top: 0;
+    }
+
+    .c-pic02 {
+        width: 100%;
+        height: 40vh;
+        box-shadow: none;
+    }
+
+    .c-text02 {
+        width: 90%;
+        padding: 5%;
+        margin-right: 0;
+        margin-top: -15%;
+        box-shadow: 66px 66px 0px -50px #052d63;
+    }
+
+    .c-letter {
+        top: 1%;
+    }
+
+    .c-letter2 {
+        top: -4%;
+        left: 0;
+        font-size: 5em;
+    }
+    
+    .c-event-contain{
+        margin-top: 0;
+    }
+    
+    #navigation>ul>li>a>h5 {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .c-more{
+        margin-left: 5%;
+    }
 }
