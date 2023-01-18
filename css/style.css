@@ -920,6 +920,7 @@ a:hover {
     .Lb-block .news-contain {
         margin-bottom: 0;
         margin-right: 0;
+        z-index: 99;
     }
 
     .news-contain {
@@ -927,6 +928,7 @@ a:hover {
         align-items: flex-start;
         margin-top: 15px;
         margin-bottom: 0;
+        z-index: 999;
     }
 
     .news-contain h1 {
@@ -3398,6 +3400,11 @@ td {
     height: 40vh;
 }
 
+.autoplay-area {
+    height: 200px;
+    overflow-y: hidden;
+}
+
 .autoplay-img {
     width: 100%;
     padding: 0 1%;
@@ -3717,7 +3724,7 @@ td {
 /* art */
 
 .charity-inner-container {
-    border-top: 50px solid #d4eeff80;
+    border-top: 50px solid #5482c279;
 }
 
 .c-border {
@@ -3953,7 +3960,7 @@ td {
 
 @media screen and (max-width: 1200px) {
     .charity-inner-container {
-        border-top: 40px solid #d4eeff80;
+        border-top: 40px solid #5482c279;
     }
 
     .c-title-area {
@@ -4153,17 +4160,65 @@ td {
         left: 0;
         font-size: 5em;
     }
-    
-    .c-event-contain{
+
+    .c-event-contain {
         margin-top: 0;
     }
-    
+
     #navigation>ul>li>a>h5 {
         margin: 0;
         font-size: 14px;
     }
 
-    .c-more{
+    .c-more {
         margin-left: 5%;
     }
+}
+
+/* green */
+
+.g-letter {
+    position: absolute;
+    right: 0;
+    top: -12%;
+    letter-spacing: 10px;
+    color: #daf3ff5e;
+    font-size: 6em;
+    font-weight: 1000;
+    writing-mode: vertical-lr;
+}
+
+.g-letter2 {
+    position: absolute;
+    left: 0;
+    top: 4%;
+    color: #daf3ff5e;
+    font-size: 8em;
+    font-weight: 1000;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.g-letter3 {
+    position: absolute;
+    right: 0;
+    top: -2%;
+    letter-spacing: 10px;
+    color: #daf3ff5e;
+    font-size: 6em;
+    font-weight: 1000;
+    writing-mode: vertical-lr;
+}
+
+.g-btn {
+    margin-top: 10px;
+    border: #052D63 1px solid;
+    padding: 10px;
+    box-shadow: #50505085 0px 1px 3px;
+    transition: all 0.1s linear;
+}
+
+.g-btn:hover {
+    background-color: #052D63;
+    color: white;
 }

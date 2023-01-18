@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-250890082-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-250890082-1');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +26,9 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </head>
 
 <style>
@@ -24,6 +36,17 @@
         .slick-current {
             background-image: linear-gradient(to right, transparent 0%, transparent 100%);
         }
+    }
+
+    .event_content {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .event_content>ul>li {
+        list-style-type: disc;
+        display: list-item;
+        text-align: left;
     }
 </style>
 
@@ -70,29 +93,30 @@
                 </ul>
             </div>
         </nav>
-        <main>
+        <main id="app">
             <div id="top"></div>
             <div class="event-inner-header">
-                <div class="event-inner-cover event-inner-cover01"></div>
+                <div class="event-inner-cover event-inner-cover01"
+                    :style="{ backgroundImage: `url( ${(url_event_img + apiResult.data.image_1)} )` }"></div>
                 <div class="event-title">
                     <div class="event-title-L">
                         <a href="event.html"><button class="event-arrow">
                                 <h5>回上頁</h5>
                             </button></a>
                         <h1>2022</h1>
-                        <h1>護眼EYECARE</h1>
+                        <h1>{{apiResult.data.title}}</h1>
                     </div>
-                    <a href="#" class="sign-area"><button class="btn-sign">前往報名</button></a>
+                    <a v-bind:href="apiResult.data.link" class="sign-area"><button class="btn-sign"
+                            v-if="Date.parse(apiResult.data.end_date) > new Date()">前往報名</button></a>
                 </div>
                 <table class="event-title-table">
                     <tr>
                         <th>主辦單位</th>
-                        <td>徐元智先生紀念基金會</td>
+                        <td>{{apiResult.data.host}}</td>
                     </tr>
                     <tr>
                         <th>協辦單位</th>
-                        <td>國立陽明交通大學</td>
-                        <td>亞東科技大學</td>
+                        <td>{{apiResult.data.co_organizer}}</td>
                     </tr>
                 </table>
             </div>
@@ -106,15 +130,7 @@
                 <div class="col-lg-2 col-md-1 col-0"></div>
                 <div class="col-lg-8 col-md-10 col-12 event-inner-text">
                     <!-- <p>活動日期：2022/08/01-2022/08/31</p> -->
-                    <p>
-                        事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
-                    </p>
-                    <p>
-                        事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
-                        事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
-                        事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
-                        事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
-                    </p>
+                    <p>{{apiResult.data.content}}</p>
                     <img class="event-border-R" src="img/events/border-R.png" alt="">
                 </div>
                 <div class="col-lg-2 col-md-1 col-0"></div>
@@ -123,9 +139,9 @@
                 <div class="col-lg-2 col-md-2 col-1"></div>
                 <div class="col-lg-8 col-md-8 col-10 event-detail">
                     <h5>
-                        活動時間：8/20(六) 14:00-16:00
-                        <br>報名截止日期：2022/08/01
-                        <br>地點：亞東科技大學
+                        活動時間：{{apiResult.data.event_date}}
+                        <br>報名截止日期：{{apiResult.data.end_date}}
+                        <br>地點：{{apiResult.data.address}}
                     </h5>
                 </div>
                 <div class="col-lg-2 col-md-2 col-1"></div>
@@ -134,28 +150,26 @@
                 <div class="col-lg-2 col-md-1 col-0"></div>
                 <div class="col-lg-8 col-md-10 col-12 event-pic-contain">
                     <div class="autoplay">
-                        <div>
-                            <img class="autoplay-img" data-lazy="img/events/01/eyes_poster.jpg" />
+                        <div class="autoplay-area">
+                            <img class="autoplay-img" v-bind:src="(img_1)" />
                         </div>
-                        <div>
-                            <img class="autoplay-img" data-lazy="img/events/01/eyes_poster.jpg" />
+                        <div class="autoplay-area">
+                            <img class="autoplay-img" v-bind:src="(img_2)" />
                         </div>
-                        <div>
-                            <img class="autoplay-img" data-lazy="img/events/01/eyes_poster.jpg" />
+                        <div class="autoplay-area">
+                            <img class="autoplay-img" v-bind:src="(img_3)" />
                         </div>
-                        <div>
-                            <img class="autoplay-img" data-lazy="img/events/01/eyes_poster.jpg" />
-                        </div>
-                        <div>
-                            <img class="autoplay-img" data-lazy="img/events/01/eyes_poster.jpg" />
-                        </div>
-                        <div>
-                            <img class="autoplay-img" data-lazy="img/events/01/eyes_poster.jpg" />
+                        <div class="autoplay-area">
+                            <img class="autoplay-img" v-bind:src="(img_4)" />
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-1 col-0"></div>
             </div>
+            <div class="event_content" style="display: flex;justify-content: center;">
+                <div v-html="apiResult.data.editordata"></div>
+            </div>
+            <!--活動期程
             <div class="row event-flow">
                 <div class="col-lg-2 col-md-1 col-0"></div>
                 <div class="col-lg-8 col-md-10 col-12 flow-area">
@@ -251,7 +265,8 @@
                     </table>
                 </div>
                 <div class="col-lg-2 col-md-1 col-0"></div>
-            </div>
+            </div>-->
+
             <!-- <div class="event-talk">
                 <div class="row">
                     <div class="col-12">
@@ -281,6 +296,8 @@
                     <div class="col-lg-1 col-md-1 col-0"></div>
                 </div>
             </div> -->
+
+            <!--講師
             <div class="row person-area">
                 <div class="col-lg-2 col-md-1 col-0"></div>
                 <div class="col-lg-3 col-md-4 col-12 person-head-area">
@@ -310,11 +327,12 @@
                     <div class="person-head"></div>
                 </div>
                 <div class="col-lg-2 col-md-1 col-1 person-text2-R"></div>
-            </div>
+            </div>-->
+
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-1"></div>
                 <div class="col-lg-10 col-md-10 col-10 news-detail">
-                    <p>Post date：2022/08/01<br>Post by：徐元智先生紀念基金會</p>
+                    <p>Post date：{{ formatDate(apiResult.data.created_at) }}<br>Post by：徐元智先生紀念基金會</p>
                 </div>
                 <div class="col-lg-1 col-md-1 col-1"></div>
             </div>
@@ -346,7 +364,8 @@
                         <li class="ft-li"><a href="news.html">最新消息</a></li>
                         <li class="ft-li"><a href="event.html">焦點活動</a></li>
                         <li class="ft-li"><a href="#">聯絡我們</a></li>
-                        <li class="ft-li"><a href="https://www.feg.com.tw/tw/home/index.aspx" target="_blank">遠東集團</a></li>
+                        <li class="ft-li"><a href="https://www.feg.com.tw/tw/home/index.aspx" target="_blank">遠東集團</a>
+                        </li>
                     </ul>
                     <ul class="ft-ul">
                         <li class="ft-li"><a href="about.html">關於我們</a></li>
@@ -373,7 +392,7 @@
                     <p>copyright｜遠東集團<br>徐元智先生紀念基金會</p>
                 </div>
             </div>
-        
+
         </footer>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -383,6 +402,67 @@
     <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
     <script>
+
+        const { reactive } = Vue;
+        const app = {
+            beforeCreate() {
+                sessionStorage.clear();
+            },
+            created() {
+            },
+            methods: {
+                formatDate(dateString) {
+                    const date = dayjs(dateString);
+                    return date.format('YYYY/MM/D');
+                }
+            },
+            setup() {
+                var apiResult = reactive({
+                    data: [{
+                        "id": "",
+                        "title": "",
+                        "content": "",
+                        "host": "",
+                        "co_organizer": "",
+                        "start_date": "",
+                        "end_date": "",
+                        "event_date": "",
+                        "address": "",
+                        "image_1": "",
+                        "image_2": "",
+                        "image_3": "",
+                        "image_4": "",
+                        "editordata": "",
+                        "link": "",
+                        "type": "",
+                        "created_at": ""
+                    }]
+                });
+                var getUrlString = location.href;
+                var url = new URL(getUrlString);
+                var id = url.searchParams.get('id');
+                var url_event = 'http://127.0.0.1/foundation/foundation_laravel/public/api/event/';
+                var url_event_img = 'http://127.0.0.1/foundation/foundation_laravel/storage/app/public/event/';
+                axios
+                    .get(url_event + id)
+                    .then((res) => {
+                        apiResult.data = res.data
+                        console.log(apiResult.data)
+                        sessionStorage.setItem("image_1", apiResult.data.image_1);
+                        sessionStorage.setItem("image_2", apiResult.data.image_2);
+                        sessionStorage.setItem("image_3", apiResult.data.image_3);
+                        sessionStorage.setItem("image_4", apiResult.data.image_4);
+                    })
+                    .catch((error) => console.log(error));
+                var img_1 = url_event_img + sessionStorage.getItem("image_1");
+                var img_2 = url_event_img + sessionStorage.getItem("image_2");
+                var img_3 = url_event_img + sessionStorage.getItem("image_3");
+                var img_4 = url_event_img + sessionStorage.getItem("image_4");
+                return { apiResult, url_event_img, img_1, img_2, img_3, img_4 }
+            },
+        }
+        Vue.createApp(app).mount("#app");
+
         AOS.init();
 
         $(".hover").mouseleave(
@@ -445,6 +525,8 @@
             prevArrow: "<img class='event-prev' src='img/L.png'>",
             nextArrow: "<img class='event-next' src='img/R.png'>",
         });
+
+
     </script>
 </body>
 

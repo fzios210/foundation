@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-250890082-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-250890082-1');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -112,61 +123,36 @@
                     <div class="main-pic pic01"></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="app">
                 <div class="col-lg-3 col-md-3 col-sm-12 Lb-block">
-                    <div class="news-contain" data-aos="fade-left">
+                    <div class="news-contain" data-aos="fade-left" v-for="item in apiResult.data.slice(0, 1)">
                         <h1>最新消息</h1>
-                        <div class="img-div news01">
-                            <a href="#">
+                        <div class="img-div" :style="{ backgroundImage: `url( ${(url_news_img + item.image)} )` }">
+                            <a href="#" @click="link(item.id)">
                                 <div class="mask">
                                     <p>閱讀更多</p>
                                 </div>
                             </a>
                         </div>
-                        <a href="#" class="news-title" data-aos="fade-left">
-                            <h5>活動名稱</h5>
-                            <p>2022/08/01-2022/08/31</p>
+                        <a href="#" class="news-title" data-aos="fade-left" @click="link(item.id)">
+                            <h5>{{item.title}}</h5>
+                            <p>{{item.date}}</p>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 news-area">
-                    <div class="news-contain" data-aos="fade-left" data-aos-delay="100">
-                        <div class="img-div news02">
-                            <a href="#">
+                    <div class="news-contain" data-aos="fade-left" data-aos-delay="100"
+                        v-for="item in apiResult.data.slice(1, 4)">
+                        <div class="img-div" :style="{ backgroundImage: `url( ${(url_news_img + item.image)} )` }">
+                            <a href="#" @click="link(item.id)">
                                 <div class="mask">
                                     <p>閱讀更多</p>
                                 </div>
                             </a>
                         </div>
-                        <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="100">
-                            <h5>活動名稱</h5>
-                            <p>2022/08/01-2022/08/31</p>
-                        </a>
-                    </div>
-                    <div class="news-contain" data-aos="fade-left" data-aos-delay="200">
-                        <div class="img-div news03">
-                            <a href="#">
-                                <div class="mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                        </div>
-                        <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="200">
-                            <h5>活動名稱</h5>
-                            <p>2022/08/01-2022/08/31</p>
-                        </a>
-                    </div>
-                    <div class="news-contain" data-aos="fade-left" data-aos-delay="300">
-                        <div class="img-div news04">
-                            <a href="#">
-                                <div class="mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                        </div>
-                        <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="300">
-                            <h5>活動名稱</h5>
-                            <p>2022/08/01-2022/08/31</p>
+                        <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="100" @click="link(item.id)">
+                            <h5>{{item.title}}</h5>
+                            <p>{{ item.date }}</p>
                         </a>
                     </div>
                 </div>
@@ -203,28 +189,28 @@
                             <div class="flex-title">設計</div>
                             <div class="flex-about">
                                 <h5>徐元智紀念基金會贊助各項藝文活動，例:雲門舞集、雅音小集、明華園歌仔戲劇團、台北愛樂室內管弦樂團等，並高度支持人才培育及扎根行動。</h5>
-                                <a href="#"><button class="btn-flex">了解更多</button></a>
+                                <a href="design.html"><button class="btn-flex">了解更多</button></a>
                             </div>
                         </div>
                         <div class="flex-slide work">
                             <div class="flex-title">教育</div>
                             <div class="flex-about">
                                 <h5>徐元智先生紀念基金會致力打造知識寶庫，長年持續舉辦各式國際交流研討會，邀請逾百位國際權威專家來臺，前進校園，走向社會，與臺灣民眾共享新知。</h5>
-                                <a href="#"><button class="btn-flex">了解更多</button></a>
+                                <a href="edu.html"><button class="btn-flex">了解更多</button></a>
                             </div>
                         </div>
                         <div class="flex-slide re">
                             <div class="flex-title">環保</div>
                             <div class="flex-about">
                                 <h5>徐元智先生紀念基金會身為非營利公益組織，更肩負起集團單位聯繫、資源整合之重責，跟隨集團腳步，走進世界各個角落，幫助人們脫離困境、改善生活。</h5>
-                                <a href="#"><button class="btn-flex">了解更多</button></a>
+                                <a href="green.html"><button class="btn-flex">了解更多</button></a>
                             </div>
                         </div>
                         <div class="flex-slide contact">
                             <div class="flex-title">公益</div>
                             <div class="flex-about">
                                 <h5>徐元智先生紀念基金會身為非營利公益組織，更肩負起集團單位聯繫、資源整合之重責，跟隨集團腳步，走進世界各個角落，幫助人們脫離困境、改善生活。</h5>
-                                <a href="#"><button class="btn-flex">了解更多</button></a>
+                                <a href="charity.html"><button class="btn-flex">了解更多</button></a>
                             </div>
                         </div>
                     </div>
@@ -272,7 +258,8 @@
                         <li class="ft-li"><a href="news.html">最新消息</a></li>
                         <li class="ft-li"><a href="event.html">焦點活動</a></li>
                         <li class="ft-li"><a href="#">聯絡我們</a></li>
-                        <li class="ft-li"><a href="https://www.feg.com.tw/tw/home/index.aspx" target="_blank">遠東集團</a></li>
+                        <li class="ft-li"><a href="https://www.feg.com.tw/tw/home/index.aspx" target="_blank">遠東集團</a>
+                        </li>
                     </ul>
                     <ul class="ft-ul">
                         <li class="ft-li"><a href="about.html">關於我們</a></li>
@@ -308,7 +295,44 @@
     <script src="js/script.js"></script>
     <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+
     <script>
+        const { reactive } = Vue;
+        const app = {
+            created() {
+            },
+            setup() {
+                const text = '';
+                var url_news = 'http://127.0.0.1/foundation/foundation_laravel/public/api/news';
+                var url_news_img = 'http://127.0.0.1/foundation/foundation_laravel/storage/app/public/news/';
+                apiResult = reactive({
+                    data: [{
+                        "id": "",
+                        "title": "",
+                        "content": "",
+                        "date": "",
+                        "image": "",
+                        "type": ""
+                    }]
+                });
+                axios
+                    .get(url_news)
+                    .then((res) => {
+                        apiResult.data = res.data.reverse()
+                        console.log(apiResult.data);
+                    })
+                    .catch((error) => console.log(error));
+                return { apiResult, url_news_img }
+            },
+            methods: {
+                link(id) {
+                    text = 'news_01.html?id=' + id + '';
+                    location.href = text;
+                }
+            },
+        }
+        Vue.createApp(app).mount("#app");
+
         AOS.init();
 
         $(".hover").mouseleave(
@@ -352,6 +376,9 @@
         } else if (pageWidth > 600) {
             document.getElementById("GT").textContent = "BACK TO TOP";
         }
+
+
+
     </script>
 </body>
 

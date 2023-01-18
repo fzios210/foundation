@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-250890082-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-250890082-1');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +26,13 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="app">
         <nav class="nav navbar navbar-expand-xl navbar-light">
             <a href="index.html" class="home-btn"><img src="img/fe.png" alt="logo" class="logo">
             </a>
@@ -63,7 +75,7 @@
             </div>
         </nav>
         <header class="news-inner-header">
-            <h1 class="news-header-title">活動標題</h1>
+            <h1 class="news-header-title">{{apiResult.data.title}}</h1>
         </header>
         <main>
             <div id="top"></div>
@@ -75,24 +87,18 @@
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-0"></div>
                 <div class="col-lg-5 col-md-5 col-12 news-inner-area">
-                    <p>活動日期：2022/08/01-2022/08/31</p>
-                    <p>
-                        事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
-                    </p>
-                    <p>
-                        在眾多捐助案件中，對我國工商與科技發展影響最深遠的。
-                        關懷面向多元，40年來，徐元智先生紀念基金會共核定資助計逾2,000項，獎助支出近新台幣40億元，均由基金孽息撥付，公益服務範疇廣含藝文公益活動、科技、政經、人文之國際學術研討、學校輔助及學術研究、獎助學金、兒童及成人社會教育、醫學教育研究、體育等項目。
-                    </p>
+                    <p>活動日期：{{apiResult.data.date}}</p>
+                    <p>{{apiResult.data.content}}</p>
                 </div>
                 <div class="col-lg-5 col-md-5 col-12 news-pic-contain">
-                    <img class="news-inner-pic" src="img/news/01.jpg" alt="">
+                    <img class="news-inner-pic" v-bind:src="(url_news_img + apiResult.data.image)" alt="">
                 </div>
                 <div class="col-lg-1 col-md-1 col-0"></div>
             </div>
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-1"></div>
                 <div class="col-lg-10 col-md-10 col-10 news-detail">
-                    <p>Post date：2022/08/01<br>Post by：徐元智先生紀念基金會</p>
+                    <p>Post date：{{ formatDate(apiResult.data.created_at) }}<br>Post by：徐元智先生紀念基金會</p>
                 </div>
                 <div class="col-lg-1 col-md-1 col-1"></div>
             </div>
@@ -123,7 +129,8 @@
                         <li class="ft-li"><a href="news.html">最新消息</a></li>
                         <li class="ft-li"><a href="event.html">焦點活動</a></li>
                         <li class="ft-li"><a href="#">聯絡我們</a></li>
-                        <li class="ft-li"><a href="https://www.feg.com.tw/tw/home/index.aspx" target="_blank">遠東集團</a></li>
+                        <li class="ft-li"><a href="https://www.feg.com.tw/tw/home/index.aspx" target="_blank">遠東集團</a>
+                        </li>
                     </ul>
                     <ul class="ft-ul">
                         <li class="ft-li"><a href="about.html">關於我們</a></li>
@@ -150,7 +157,7 @@
                     <p>copyright｜遠東集團<br>徐元智先生紀念基金會</p>
                 </div>
             </div>
-        
+
         </footer>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -160,6 +167,48 @@
     <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
     <script>
+        const { reactive } = Vue;
+        const app = {
+            created() {
+                AOS.init({});
+            },
+            setup() {
+                var getUrlString = location.href;
+                var url = new URL(getUrlString);
+                var id = url.searchParams.get('id');
+                var url_news = 'http://127.0.0.1/foundation/foundation_laravel/public/api/news/';
+                var url_news_img = 'http://127.0.0.1/foundation/foundation_laravel/storage/app/public/news/';
+
+                apiResult = reactive({
+                    data: [{
+                        "id": "",
+                        "title": "",
+                        "content": "",
+                        "date": "",
+                        "image": "",
+                        "type": "",
+                        "created_at": ""
+                    }]
+                });
+                axios
+                    .get(url_news + id)
+                    .then((res) => {
+                        apiResult.data = res.data
+                        console.log(apiResult.data)
+                        console.log(apiResult.data.created_at)
+                    })
+                    .catch((error) => console.log(error));
+                return { apiResult, url_news_img }
+            },
+            methods: {
+                formatDate(dateString) {
+                    const date = dayjs(dateString);
+                    return date.format('YYYY/MM/D');
+                }
+            },
+        }
+        Vue.createApp(app).mount("#app");
+
         AOS.init();
 
         $(".hover").mouseleave(
@@ -190,6 +239,8 @@
         } else if (pageWidth > 600) {
             document.getElementById("GT").textContent = "BACK TO TOP";
         }
+
+
     </script>
 </body>
 
