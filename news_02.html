@@ -28,10 +28,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="app">
         <nav class="nav navbar navbar-expand-xl navbar-light">
             <a href="index.html" class="home-btn"><img src="img/fe.png" alt="logo" class="logo">
             </a>
@@ -73,103 +74,33 @@
                 </ul>
             </div>
         </nav>
-        <header class="news-header">
-            <h1 class="news-header-title">最新消息</h1>
-            <div class="news-header-color"></div>
+        <header class="news-inner-header">
+            <h1 class="news-header-title">遠東建築獎</h1>
         </header>
         <main>
             <div id="top"></div>
-
-            <div class="row" id="app">
-                <div class="col-lg-12 col-md-12 col-12 news-type">
-                    <div class="switch-field">
-                        <input type="radio" id="radio-one" name="switch" value="all" checked @click="gettype('')" />
-                        <label for="radio-one">全部</label>
-                        <input type="radio" id="radio-two" name="switch" value="green" @click="gettype('type/green')" />
-                        <label for="radio-two">環保</label>
-                        <input type="radio" id="radio-three" name="switch" value="care" @click="gettype('type/care')" />
-                        <label for="radio-three">長照</label>
-                        <input type="radio" id="radio-four" name="switch" value="build"
-                            @click="gettype('type/build')" />
-                        <label for="radio-four">建築</label>
-                    </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12 news-back">
+                    <a href="news.html"><button class="hover-arrow">回上頁</button></a>
                 </div>
-                <div class="col-lg-12 col-md-12 col-12 news-main-area">
-                    <div class="news-main-contain" data-aos="fade-left" data-aos-delay="100"
-                        v-for="item in apiResult.data">
-                        <div class="news-img-div" style="background-image: url('img/news/05.jpg')">
-                            <a href="news_04.html">
-                                <div class="news-mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="news-main-title">
-                            <a href="news_04.html">
-                                <h3>兒童護眼彩繪活動</h3>
-                                <button class="news-s-type" v-if="item.type == 'green'">環保</button>
-                            </a>
-                            <p class="news-outline">徐元智先生紀念基金會正是徐有庠、徐旭東父子與遠東集團不間斷追求理想與承諾的實踐，全球策略大師麥可．波特認為，企業成立基金會不可能至適充當捐款的旋轉門，應該進一步嘗試成為領導社會進步、改造社會的先鋒，企業基金會才有可能創造最大價值。</p>
-                            <p>2023-04-14</p>
-                        </div>
-                    </div>
-                    <div class="news-main-contain" data-aos="fade-left" data-aos-delay="100"
-                        v-for="item in apiResult.data">
-                        <div class="news-img-div" style="background-image: url('img/news/04.jpg')">
-                            <a href="news_03.html">
-                                <div class="news-mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="news-main-title">
-                            <a href="news_03.html">
-                                <h3>亞泥生態園區</h3>
-                                <button class="news-s-type" v-if="item.type == 'green'">環保</button>
-                            </a>
-                            <p class="news-outline">徐元智先生紀念基金會正是徐有庠、徐旭東父子與遠東集團不間斷追求理想與承諾的實踐，全球策略大師麥可．波特認為，企業成立基金會不可能至適充當捐款的旋轉門，應該進一步嘗試成為領導社會進步、改造社會的先鋒，企業基金會才有可能創造最大價值。</p>
-                            <p>2023-04-13</p>
-                        </div>
-                    </div>
-                    <div class="news-main-contain" data-aos="fade-left" data-aos-delay="100" v-for="item in apiResult.data">
-                        <div class="news-img-div" style="background-image: url('img/news/03.jpg')">
-                            <a href="news_02.html">
-                                <div class="news-mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="news-main-title">
-                            <a href="news_02.html">
-                                <h3>遠東建築獎</h3>
-                                <button class="news-s-type" v-if="item.type == 'build'">建築</button>
-                            </a>
-                            <p class="news-outline">
-                                徐元智先生紀念基金會正是徐有庠、徐旭東父子與遠東集團不間斷追求理想與承諾的實踐，全球策略大師麥可．波特認為，企業成立基金會不可能至適充當捐款的旋轉門，應該進一步嘗試成為領導社會進步、改造社會的先鋒，企業基金會才有可能創造最大價值。
-                            </p>
-                            <p>2023-04-12</p>
-                        </div>
-                    </div>
-                    <div class="news-main-contain" data-aos="fade-left" data-aos-delay="100" v-for="item in apiResult.data">
-                        <div class="news-img-div" style="background-image: url('img/news/02.jpg')">
-                            <a href="news_01.html">
-                                <div class="news-mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="news-main-title">
-                            <a href="news_01.html">
-                                <h3>徐元智先生紀念基金會</h3>
-                                <button class="news-s-type" v-if="item.type == 'care'">長照</button>
-                            </a>
-                            <p class="news-outline">
-                                徐元智先生紀念基金會正是徐有庠、徐旭東父子與遠東集團不間斷追求理想與承諾的實踐，全球策略大師麥可．波特認為，企業成立基金會不可能至適充當捐款的旋轉門，應該進一步嘗試成為領導社會進步、改造社會的先鋒，企業基金會才有可能創造最大價值。
-                            </p>
-                            <p>2023-04-11</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-0"></div>
+                <div class="col-lg-5 col-md-5 col-12 news-inner-area">
+                    <p>活動日期：2023-04-12</p>
+                    <p>徐元智先生紀念基金會正是徐有庠、徐旭東父子與遠東集團不間斷追求理想與承諾的實踐，全球策略大師麥可．波特認為，企業成立基金會不可能至適充當捐款的旋轉門，應該進一步嘗試成為領導社會進步、改造社會的先鋒，企業基金會才有可能創造最大價值。</p>
                 </div>
+                <div class="col-lg-5 col-md-5 col-12 news-pic-contain">
+                    <img class="news-inner-pic" src="img/news/03.jpg" alt="">
+                </div>
+                <div class="col-lg-1 col-md-1 col-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-1"></div>
+                <div class="col-lg-10 col-md-10 col-10 news-detail">
+                    <p>Post date：2023/04/12<br>Post by：徐元智先生紀念基金會</p>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1"></div>
             </div>
             <div class="gotop">
                 <a href="#top">
@@ -236,16 +167,17 @@
     <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
     <script>
-
         const { reactive } = Vue;
-        var url_news = 'http://127.0.0.1/foundation/foundation_laravel/public/api/news/';
-        var url_news_img = 'http://127.0.0.1/foundation/foundation_laravel/storage/app/public/news/';
         const app = {
             created() {
+                AOS.init({});
             },
             setup() {
-                var text = '';
-
+                var getUrlString = location.href;
+                var url = new URL(getUrlString);
+                var id = url.searchParams.get('id');
+                var url_news = 'http://127.0.0.1/foundation/foundation_laravel/public/api/news/';
+                var url_news_img = 'http://127.0.0.1/foundation/foundation_laravel/storage/app/public/news/';
 
                 apiResult = reactive({
                     data: [{
@@ -254,38 +186,31 @@
                         "content": "",
                         "date": "",
                         "image": "",
-                        "type": ""
+                        "type": "",
+                        "created_at": ""
                     }]
-                })
+                });
                 axios
-                    .get(url_news)
+                    .get(url_news + id)
                     .then((res) => {
-                        apiResult.data = res.data.reverse()
+                        apiResult.data = res.data
+                        console.log(apiResult.data)
+                        console.log(apiResult.data.created_at)
                     })
                     .catch((error) => console.log(error));
                 return { apiResult, url_news_img }
             },
             methods: {
-                gettype(type) {
-                    console.log(type);
-                    axios
-                        .get(url_news + type)
-                        .then((res) => {
-                            apiResult.data = res.data.reverse()
-                            console.log(apiResult.data);
-                        })
-                        .catch((error) => console.log(error));
-                    return { apiResult }
-                },
-                link(id) {
-                    text = 'news_01.html?id=' + id + '';
-                    location.href = text;
+                formatDate(dateString) {
+                    const date = dayjs(dateString);
+                    return date.format('YYYY/MM/D');
                 }
             },
         }
         Vue.createApp(app).mount("#app");
 
         AOS.init();
+
         $(".hover").mouseleave(
             function () {
                 $(this).removeClass("hover");

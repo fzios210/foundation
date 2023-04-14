@@ -127,32 +127,57 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 Lb-block">
                     <div class="news-contain" data-aos="fade-left" v-for="item in apiResult.data.slice(0, 1)">
                         <h1>最新消息</h1>
-                        <div class="img-div" :style="{ backgroundImage: `url( ${(url_news_img + item.image)} )` }">
-                            <a href="#" @click="link(item.id)">
+                        <div class="img-div" style="background-image: url('img/news/05.jpg')">
+                            <a href="news_04.html">
                                 <div class="mask">
                                     <p>閱讀更多</p>
                                 </div>
                             </a>
                         </div>
-                        <a href="#" class="news-title" data-aos="fade-left" @click="link(item.id)">
-                            <h5>{{item.title}}</h5>
-                            <p>{{item.date}}</p>
+                        <a href="news_04.html" class="news-title" data-aos="fade-left">
+                            <h5>兒童護眼彩繪活動</h5>
+                            <p>2023-04-14</p>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 news-area">
-                    <div class="news-contain" data-aos="fade-left" data-aos-delay="100"
-                        v-for="item in apiResult.data.slice(1, 4)">
-                        <div class="img-div" :style="{ backgroundImage: `url( ${(url_news_img + item.image)} )` }">
-                            <a href="#" @click="link(item.id)">
+                    <div class="news-contain" data-aos="fade-left" v-for="item in apiResult.data.slice(0, 1)">
+                        <div class="img-div" style="background-image: url('img/news/04.jpg')">
+                            <a href="news_03.html">
                                 <div class="mask">
                                     <p>閱讀更多</p>
                                 </div>
                             </a>
                         </div>
-                        <a href="#" class="news-title" data-aos="fade-left" data-aos-delay="100" @click="link(item.id)">
-                            <h5>{{item.title}}</h5>
-                            <p>{{ item.date }}</p>
+                        <a href="news_03.html" class="news-title" data-aos="fade-left">
+                            <h5>亞泥生態園區</h5>
+                            <p>2023-04-13</p>
+                        </a>
+                    </div>
+                    <div class="news-contain" data-aos="fade-left" v-for="item in apiResult.data.slice(0, 1)">
+                        <div class="img-div" style="background-image: url('img/news/03.jpg')">
+                            <a href="news_02.html">
+                                <div class="mask">
+                                    <p>閱讀更多</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="news_02.html" class="news-title" data-aos="fade-left">
+                            <h5>遠東建築獎</h5>
+                            <p>2023-04-12</p>
+                        </a>
+                    </div>
+                    <div class="news-contain" data-aos="fade-left" v-for="item in apiResult.data.slice(0, 1)">
+                        <div class="img-div" style="background-image: url('img/news/02.jpg')">
+                            <a href="news_01.html">
+                                <div class="mask">
+                                    <p>閱讀更多</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="news_01.html" class="news-title" data-aos="fade-left">
+                            <h5>徐元智先生紀念基金會</h5>
+                            <p>2023-04-11</p>
                         </a>
                     </div>
                 </div>
