@@ -97,14 +97,14 @@
             <div id="top"></div>
             <div class="event-inner-header">
                 <div class="event-inner-cover event-inner-cover01"
-                    :style="{ backgroundImage: `url( ${(url_event_img + apiResult.data.image_1)} )` }"></div>
+                    style="background-image: url('img/events/01/eyes_poster.jpg')"></div>
                 <div class="event-title">
                     <div class="event-title-L">
                         <a href="event.html"><button class="event-arrow">
                                 <h5>回上頁</h5>
                             </button></a>
                         <h1>2022</h1>
-                        <h1>{{apiResult.data.title}}</h1>
+                        <h1>護眼EYECARE</h1>
                     </div>
                     <a v-bind:href="apiResult.data.link" class="sign-area"><button class="btn-sign"
                             v-if="Date.parse(apiResult.data.end_date) > new Date()">前往報名</button></a>
@@ -112,11 +112,11 @@
                 <table class="event-title-table">
                     <tr>
                         <th>主辦單位</th>
-                        <td>{{apiResult.data.host}}</td>
+                        <td>徐元智先生紀念基金會</td>
                     </tr>
                     <tr>
                         <th>協辦單位</th>
-                        <td>{{apiResult.data.co_organizer}}</td>
+                        <td>國立陽明交通大學　亞東科技大學</td>
                     </tr>
                 </table>
             </div>
@@ -130,7 +130,12 @@
                 <div class="col-lg-2 col-md-1 col-0"></div>
                 <div class="col-lg-8 col-md-10 col-12 event-inner-text">
                     <!-- <p>活動日期：2022/08/01-2022/08/31</p> -->
-                    <p>{{apiResult.data.content}}</p>
+                    <p>事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
+                    事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
+                    事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
+                    事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
+                    事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。事業有成後徐有庠先生本著「取諸社會、用諸社會」精神，投身公益。1976年成立徐元智先生紀念基金會。徐元智先生紀念基金會創立40餘年來，曾歷經石油危機和地區性戰爭，但其捐助會務卻未曾受影響，各項工作成果也獲得各界讚賞。
+                    事業有成後徐有庠先生本著</p>
                     <img class="event-border-R" src="img/events/border-R.png" alt="">
                 </div>
                 <div class="col-lg-2 col-md-1 col-0"></div>
@@ -139,9 +144,9 @@
                 <div class="col-lg-2 col-md-2 col-1"></div>
                 <div class="col-lg-8 col-md-8 col-10 event-detail">
                     <h5>
-                        活動時間：{{apiResult.data.event_date}}
-                        <br>報名截止日期：{{apiResult.data.end_date}}
-                        <br>地點：{{apiResult.data.address}}
+                        活動時間：2022-09-07
+                        <br>報名截止日期：2023-03-11
+                        <br>地點：亞東科技大學
                     </h5>
                 </div>
                 <div class="col-lg-2 col-md-2 col-1"></div>
@@ -151,16 +156,16 @@
                 <div class="col-lg-8 col-md-10 col-12 event-pic-contain">
                     <div class="autoplay">
                         <div class="autoplay-area">
-                            <img class="autoplay-img" v-bind:src="(img_1)" />
+                            <img class="autoplay-img" src="img/events/01/eyes_poster.jpg" />
                         </div>
                         <div class="autoplay-area">
-                            <img class="autoplay-img" v-bind:src="(img_2)" />
+                            <img class="autoplay-img" src="img/events/01/eyes_poster.jpg" />
                         </div>
                         <div class="autoplay-area">
-                            <img class="autoplay-img" v-bind:src="(img_3)" />
+                            <img class="autoplay-img" src="img/events/01/eyes_poster.jpg" />
                         </div>
                         <div class="autoplay-area">
-                            <img class="autoplay-img" v-bind:src="(img_4)" />
+                            <img class="autoplay-img" src="img/events/01/eyes_poster.jpg" />
                         </div>
                     </div>
                 </div>
@@ -169,7 +174,6 @@
             <div class="event_content" style="display: flex;justify-content: center;">
                 <div v-html="apiResult.data.editordata"></div>
             </div>
-            <!--活動期程
             <div class="row event-flow">
                 <div class="col-lg-2 col-md-1 col-0"></div>
                 <div class="col-lg-8 col-md-10 col-12 flow-area">
@@ -265,7 +269,7 @@
                     </table>
                 </div>
                 <div class="col-lg-2 col-md-1 col-0"></div>
-            </div>-->
+            </div>
 
             <!-- <div class="event-talk">
                 <div class="row">
