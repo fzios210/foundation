@@ -85,26 +85,18 @@
                     <div class="col-lg-1 col-md-1 col-sm-1 col-0"></div>
                     <div class="col-lg-5 col-md-5 col-sm-5 col-12">
                         <div class="event-content">
-                            <a v-bind:href="item.link" target="_blank" v-if="item.type=='link'">
-                                <h1>{{item.title}}</h1>
+                            <a href="event_01.html">
+                                <h1>護眼EYECARE</h1>
                             </a>
-                            <a href="#" @click="link(item.id)" v-else>
-                                <h1>{{item.title}}</h1>
-                            </a>
-                            <p style="overflow: hidden;height: 65px;">{{item.content}}</p>
+                            <p style="overflow: hidden;height: 65px;">徐元智先生紀念基金會正是徐有庠、徐旭東父子與遠東集團不間斷追求理想與承諾的實踐，全球策略大師麥可．波特認為，企業成立基金會不可能至適充當捐款的旋轉門，應該進一步嘗試成為領導社會進步、改造社會的先鋒，企業基金會才有可能創造最大價值。</p>
                             <hr>
-                            <p v-if="item.type=='text'">{{item.start_date}}-{{item.end_date}}</p>
+                            <p v-if="item.type=='text'">2022-12-01-2022-12-31</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-5 col-12 event-pic-area">
                         <div class="event-img-div"
-                            :style="{ backgroundImage: `url( ${(url_event_img + item.image_1)} )` }">
-                            <a v-bind:href="item.link" v-if="item.type=='link'" target="_blank">
-                                <div class="news-mask">
-                                    <p>閱讀更多</p>
-                                </div>
-                            </a>
-                            <a href="#" @click="link(item.id)" v-else>
+                            style="background-image: url('img/events/01/eyes_poster.jpg')">
+                            <a href="event_01.html">
                                 <div class="news-mask">
                                     <p>閱讀更多</p>
                                 </div>
